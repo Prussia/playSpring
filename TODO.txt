@@ -1,0 +1,13 @@
+TODO
+1. Spring MVC (With AngularJS)
+2. Spring orm (Hibernate)
+3. Spring tx 
+4. Spring with MongoDB
+5. Spring Security
+6. Spring Batch
+7. Redis
+
+Nice tools
+
+1. To generate the random JSON data
+http://www.json-generator.com/
