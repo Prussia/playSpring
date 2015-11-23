@@ -61,10 +61,12 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>com.prussia.test.play.spring.Application</mainClass>
+					<!-- 
 					<jvmArguments>
 						-Xdebug
 						-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=50251
 					</jvmArguments>
+					 -->
 				</configuration>
 			</plugin>
 			<plugin>
