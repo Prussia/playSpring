@@ -8,4 +8,10 @@ public class Assesor implements RiskAssessor {
 	public Assesor(){
 		super();
 	}
+
+	@Override
+	public void createAcctount(String accountNo, String username) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -7,9 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest  extends TestCase {
     /**
      * Create the test case
      *
@@ -25,7 +23,7 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( AppTest.class,TestDatabaseAccountService.class );
     }
 
     /**
@@ -35,4 +33,5 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
 }

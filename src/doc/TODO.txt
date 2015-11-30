@@ -12,6 +12,7 @@ Nice tools
 http://www.json-generator.com/
 
 https://spring.io/guides/gs/serving-web-content/
+https://spring.io/guides/gs/consuming-rest-angularjs/
 https://spring.io/guides/gs/managing-transactions/
 https://spring.io/guides/gs/accessing-data-mongodb/
 https://spring.io/guides/gs/gradle/
