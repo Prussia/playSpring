@@ -1,5 +1,7 @@
 package com.prussia.test.play.spring;
 
+import java.util.Locale;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +28,14 @@ public class Application implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
-
 		printBeanDef(context);
+		printMessageResources(context);
+		
+	}
+
+	public static void printMessageResources(ApplicationContext context) {
+		String message = context.getMessage("message.A", null, "default message", Locale.CHINA);
+		log.info("message = " + message);
 	}
 
 	public void run(String... strings) throws Exception {
