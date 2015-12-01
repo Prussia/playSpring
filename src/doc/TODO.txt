@@ -11,16 +11,9 @@ Nice tools
 1. To generate the random JSON data
 http://www.json-generator.com/
 
-https://spring.io/guides/gs/serving-web-content/
 https://spring.io/guides/gs/consuming-rest-angularjs/
 https://spring.io/guides/gs/managing-transactions/
 https://spring.io/guides/gs/accessing-data-mongodb/
 https://spring.io/guides/gs/gradle/
 https://spring.io/guides/gs/batch-processing/
 https://spring.io/guides/gs/scheduling-tasks/
-
-
-1.
-o.s.c.s.ResourceBundleMessageSource      : ResourceBundle [message_sh] not found for MessageSource: Can't find bundle for base name message_sh, locale zh_CN
-2.
-Thymeleaf
