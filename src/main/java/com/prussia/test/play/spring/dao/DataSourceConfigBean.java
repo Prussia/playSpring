@@ -20,8 +20,6 @@ public class DataSourceConfigBean {
 
 	DataSource dataSource;
 	
-	ResourceBundleMessageSource messageSource;
-	
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource")
 	@Description("MySql data source")
