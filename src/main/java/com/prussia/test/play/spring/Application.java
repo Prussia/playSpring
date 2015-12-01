@@ -34,11 +34,16 @@ public class Application implements CommandLineRunner {
 	}
 
 	public static void printMessageResources(ApplicationContext context) {
-		String message = context.getMessage("message.A", null, "default message", Locale.CHINA);
+		printMessagebyLocale(context, Locale.CHINA);
+		printMessagebyLocale(context, Locale.ENGLISH);
+	}
+
+	private static void printMessagebyLocale(ApplicationContext context, Locale local) {
+		String message = context.getMessage("message.A", null, "default message", local);
 		log.info("message = " + message);
 		
 		String[] args = {"my", "new"," xxx" };
-		String message2 = context.getMessage("argument.required", args, "default message2", Locale.CHINA);
+		String message2 = context.getMessage("argument.required", args, "default message2", local);
 		log.info("message = " + message2);
 	}
 
