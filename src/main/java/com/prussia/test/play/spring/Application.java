@@ -36,6 +36,10 @@ public class Application implements CommandLineRunner {
 	public static void printMessageResources(ApplicationContext context) {
 		String message = context.getMessage("message.A", null, "default message", Locale.CHINA);
 		log.info("message = " + message);
+		
+		String[] args = {"my", "new"," xxx" };
+		String message2 = context.getMessage("argument.required", args, "default message2", Locale.CHINA);
+		log.info("message = " + message2);
 	}
 
 	public void run(String... strings) throws Exception {
