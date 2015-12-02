@@ -17,3 +17,11 @@ https://spring.io/guides/gs/accessing-data-mongodb/
 https://spring.io/guides/gs/gradle/
 https://spring.io/guides/gs/batch-processing/
 https://spring.io/guides/gs/scheduling-tasks/
+
+java 8
+lamda Expression
+
+分布式服务框架
+Dubbo
+
+freemarker
