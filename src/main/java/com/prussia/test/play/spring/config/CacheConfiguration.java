@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.dao;
+package com.prussia.test.play.spring.config;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Configuration;

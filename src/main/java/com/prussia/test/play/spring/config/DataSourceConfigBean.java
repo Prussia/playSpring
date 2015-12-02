@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.dao;
+package com.prussia.test.play.spring.config;
 
 import javax.sql.DataSource;
 
