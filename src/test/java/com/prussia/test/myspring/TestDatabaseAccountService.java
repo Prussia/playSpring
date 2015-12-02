@@ -7,18 +7,18 @@ import org.easymock.TestSubject;
 import org.junit.Rule;
 import org.junit.Test;
 
-import com.prussia.test.play.spring.service.DatabaseAccountService;
-import com.prussia.test.play.spring.service.RiskAssessor;
+import com.prussia.test.play.spring.service.DatabaseAccountServiceBean;
+import com.prussia.test.play.spring.service.RiskAssessorService;
 
 public class TestDatabaseAccountService extends EasyMockSupport {
 
 	@Rule
 	public EasyMockRule rule = new EasyMockRule(this);
 	@Mock
-	private RiskAssessor riskAssessor;
+	private RiskAssessorService riskAssessor;
 
 	@TestSubject
-	private final DatabaseAccountService service = new DatabaseAccountService(riskAssessor);
+	private final DatabaseAccountServiceBean service = new DatabaseAccountServiceBean(riskAssessor);
 	
 
 	@Test
