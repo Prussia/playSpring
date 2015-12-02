@@ -18,4 +18,8 @@ public class CachableCustomerRepository {
 		System.out.println("---> Loading Customer with last name '" + lastName + "'"); //when the value can be found in cache, the method won't be invoked
 		return new Customer(1, "firstName", lastName);
 	}
+	
+	/**
+	 * http://tianmaying.com/tutorial/spring-web-ehcache#15
+	 */
 }
