@@ -1,0 +1,11 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+
+	<diskStore path="/Users/bloosh2005/data/app/cache/encache" />
+	<cache name="com.prussia.test.play.spring.domain.Customer" ></cache> 
+	<defaultCache eternal="false" overflowToDisk="false"
+		maxElementsInMemory="10000" timeToIdleSeconds="3600"
+		timeToLiveSeconds="36000" />
+</ehcache>
+
+
+
