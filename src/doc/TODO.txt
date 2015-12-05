@@ -1,18 +1,24 @@
 TODO
-1. Spring MVC (With AngularJS)
-2. Spring orm (Hibernate) ---- JPA level2 ehcache *done
-3. Spring tx ---- myDao *done
-4. Spring with MongoDB ----
-5. Spring Security ----
-6. Spring Batch ----
-7. Redis ----
+
+1. Spring with MongoDB ----  Prerequisites MongoDB Java Driver 3.0.0, Spark 1.1.1, FreeMarker 2.3.19, mongoProc 3.0+
+2. Spring MVC (With AngularJS) 
+3. bootstrap
+6. Redis ----
+4. Spring Security ----
+5. Spring Batch ----
+
+
+!. Spring orm (Hibernate) ---- JPA level2 ehcache *done
+!. Spring tx ---- myDao *done
+
+
+
 
 Nice tools
 1. To generate the random JSON data
 http://www.json-generator.com/
 
 https://spring.io/guides/gs/consuming-rest-angularjs/
-https://spring.io/guides/gs/managing-transactions/
 https://spring.io/guides/gs/accessing-data-mongodb/
 https://spring.io/guides/gs/gradle/
 https://spring.io/guides/gs/batch-processing/
@@ -23,5 +29,3 @@ lamda Expression
 
 分布式服务框架
 Dubbo
-
-freemarker
