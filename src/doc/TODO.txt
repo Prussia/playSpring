@@ -6,6 +6,7 @@ TODO
 6. Redis ----
 4. Spring Security ----
 5. Spring Batch ----
+6. Mybatis
 
 
 !. Spring orm (Hibernate) ---- JPA level2 ehcache *done
