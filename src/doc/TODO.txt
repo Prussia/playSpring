@@ -9,8 +9,7 @@ TODO
 7. Mybatis vs Spring data
 
 bootstrap reference:
-http://www.w3schools.com/bootstrap/bootstrap_forms_inputs.asp
-
+http://www.w3schools.com/bootstrap/default.asp
 
 Get Started
 https://spring.io/guides/gs/consuming-rest-angularjs/
