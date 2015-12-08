@@ -2,7 +2,7 @@ TODO
 
 1. Spring with MongoDB ----  Prerequisites MongoDB Java Driver 3.0.0, Spark 1.1.1, FreeMarker 2.3.19, mongoProc 3.0+
 2. Spring MVC (With AngularJS) 
-3. bootstrap
+3. bootstrap + jQuery bootstrapValidator
 6. Redis ----
 4. Spring Security ----
 5. Spring Batch ----
