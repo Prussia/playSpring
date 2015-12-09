@@ -12,6 +12,9 @@ http://www.infoq.com/cn/news/2015/04/spring-security-4?utm_source=infoq&utm_medi
 bootstrap reference:
 http://www.w3schools.com/bootstrap/default.asp
 
+jQuery Pagination Plugin
+Date Range Picker Plugin
+
 Get Started
 https://spring.io/guides/gs/consuming-rest-angularjs/
 https://spring.io/guides/gs/accessing-data-mongodb/
