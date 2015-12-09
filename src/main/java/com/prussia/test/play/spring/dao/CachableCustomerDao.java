@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.repository;
+package com.prussia.test.play.spring.dao;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -10,7 +10,7 @@ import com.prussia.test.play.spring.domain.Customer;
 
 @Component
 @CacheConfig(cacheNames = "Customers")
-public class CachableCustomerRepository {
+public class CachableCustomerDao {
 
 	@Cacheable
 	@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)

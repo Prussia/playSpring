@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.prussia.test.play.spring.dao.CachableCustomerDao;
+import com.prussia.test.play.spring.dao.CustomerDao;
 import com.prussia.test.play.spring.domain.Customer;
-import com.prussia.test.play.spring.repository.CachableCustomerRepository;
-import com.prussia.test.play.spring.repository.CustomerRepository;
 
 @RestController
 @RequestMapping("/customer")
@@ -21,10 +21,10 @@ public class CustomerController {
 
 	
 	@Autowired
-	CustomerRepository repository;
+	CustomerDao repository;
 	
 	@Autowired
-	CachableCustomerRepository cachableRepository;
+	CachableCustomerDao cachableRepository;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody String get(Long id) {
