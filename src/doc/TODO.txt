@@ -4,7 +4,8 @@ TODO
 2. Spring MVC (With AngularJS) 
 3. bootstrap + jQuery bootstrapValidator
 4. Redis ----
-5. Spring Security ----
+5. Spring Security ---- 
+http://www.infoq.com/cn/news/2015/04/spring-security-4?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk
 6. Spring Batch ----
 7. Mybatis vs Spring data
 
