@@ -3,6 +3,8 @@ package com.prussia.test.play.spring.web;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,6 +23,7 @@ public class CustomerController {
 
 	
 	@Autowired
+	//@Qualifier ( "customerDao" ) //inject by specific name
 	CustomerDao repository;
 	
 	@Autowired
@@ -30,7 +33,7 @@ public class CustomerController {
 	public @ResponseBody String get(Long id) {
 		log.info("method = get");
 		log.info("run cachable method : " + cachableRepository.findByLastName("Bloch"));;
-		
+		log.info("customerDao" + repository.toString());
 		if (id == null) {
 			Iterable<Customer> customers = repository.findAll();
 			customers.forEach(customer -> log.info(customer.toString()));
