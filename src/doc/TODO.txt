@@ -9,6 +9,9 @@ http://www.infoq.com/cn/news/2015/04/spring-security-4?utm_source=infoq&utm_medi
 6. Spring Batch ----
 7. Mybatis vs Spring data
 
+Spring XD
+geode
+
 bootstrap reference:
 http://www.w3schools.com/bootstrap/default.asp
 
