@@ -30,8 +30,9 @@
 
 	<script type="text/javascript">
 		function showHello() {
-			var obj = document.getElementById("h01");
-			obj.innerHTML = "Hello jQuery Samples";
+			/* var obj = document.getElementById("h01");
+			obj.innerHTML = "Hello jQuery Samples"; */
+			$("#h01").text("Hello jQuery Samples");
 		}
 		
 		function showSelector() {
@@ -42,8 +43,8 @@
 			/* console.log("$(\"div #divSelect\").next("div").id = " + $("div #divSelect").next("div").innerHTML ); */
 			console.log("$(\"#Second ~[title]\").val() = " + $("#Second ~[title]").val());
 			console.log("$(\"#Second ~[type]\").val() = " + $("#Second ~[type]").val());
-			$("div:not(#h01)").each(function(i){
-				console.log("$(\"div:not(#h01).innerHTML\") =" + this.innerHTML);
+			$("div:not(#h01,#divTest,#attributeSelector)").each(function(i){
+				console.log("$(\"div:not(#h01,#divTest,#attributeSelector).innerHTML\") =" + this.innerHTML);
 			});
 		}
 		
@@ -56,13 +57,23 @@
 			$("input[value*='ip']").each(function(){
 				console.log("this value = " + this.name);
 			});
+		}
+		
+		function showAttributes(){
+			console.log("$(\"#Second\").attr(\"type\") = " + $("#Second").attr("type"));
+			console.log("$(\"#Second\").attr(\"value\") = " + $("#Second").attr("value"));
+			console.log("$(\"#Second\").attr(\"id\") = " + $("#Second").attr("id"));
 			
+			$("#Second").attr("value","change the second value");
+			$("#Second").val("2change the second value2");
+			$("#h01").text("Hello jQuery Samples");
 		}
 		
 		$(document).ready(function() {
-			/* showHello(); 
-			showSelector(); */
+			/* showHello(); */
+			showSelector(); 
 			showAttrbSelector();
+			showAttributes()
 		});
 	</script>
 </body>
