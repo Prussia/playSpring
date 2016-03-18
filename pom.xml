@@ -109,7 +109,7 @@
 						</manifestFile>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.prussia.web.Application</mainClass>
+							<mainClass>com.prussia.test.play.spring.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -119,12 +119,22 @@
 
 	<repositories>
 		<repository>
+			<id>maven</id>
+			<name>Maven Repository</name>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+		<repository>
 			<id>spring-releases</id>
 			<name>Spring Releases</name>
 			<url>https://repo.spring.io/libs-release</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
+		<pluginRepository>
+			<id>maven</id>
+			<name>Maven Repository</name>
+			<url>http://repo1.maven.org/maven2/</url>
+		</pluginRepository>
 		<pluginRepository>
 			<id>spring-releases</id>
 			<name>Spring Releases</name>
