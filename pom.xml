@@ -107,8 +107,9 @@
 				          </executions>
 				          <configuration>
 				            <tasks>
-				              <copy file="${basedir}/bower_components/angular/angular.js" tofile="src/main/resources/templates/angular/angular.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/jquery/dist/jquery.js" tofile="src/main/resources/templates/jquery/jquery.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/angular/angular.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/jquery/dist/jquery.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
 				            </tasks> 
 				          </configuration>	
 					</plugin>
@@ -133,9 +134,10 @@
 				          </executions>
 				          <configuration>
 				            <tasks>
-				              <copy file="${basedir}/bower_components/angular/angular.min.js" tofile="src/main/resources/static/js/angular/angular.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/jquery/dist/jquery.min.js" tofile="src/main/resources/static/js/jquery/jquery.js" overwrite="true"/>
-				            </tasks> 
+				              <copy file="${basedir}/bower_components/angular/angular.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/jquery/dist/jquery.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
+				           </tasks> 
 				          </configuration>	
 					</plugin>
 				</plugins>
