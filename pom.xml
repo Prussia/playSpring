@@ -133,8 +133,8 @@
 				          </executions>
 				          <configuration>
 				            <tasks>
-				              <copy file="${basedir}/bower_components/angular/angular.min.js" tofile="src/main/resources/templates/angular/angular.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/jquery/dist/jquery.min.js" tofile="src/main/resources/templates/jquery/jquery.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/angular/angular.min.js" tofile="src/main/resources/static/js/angular/angular.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/jquery/dist/jquery.min.js" tofile="src/main/resources/static/js/jquery/jquery.js" overwrite="true"/>
 				            </tasks> 
 				          </configuration>	
 					</plugin>
