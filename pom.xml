@@ -110,6 +110,7 @@
 				              <copy file="${basedir}/bower_components/angular/angular.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
 				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
 				              <copy file="${basedir}/bower_components/jquery/dist/jquery.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/lodash/dist/lodash.js" tofile="src/main/resources/static/js/lodash/dist/lodash.min.js" overwrite="true"/>
 				            </tasks> 
 				          </configuration>	
 					</plugin>
@@ -134,9 +135,10 @@
 				          </executions>
 				          <configuration>
 				            <tasks>
-				              <copy file="${basedir}/bower_components/angular/angular.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/jquery/dist/jquery.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/angular/angular.min.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.min.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
+				              <copy file="${basedir}/bower_components/jquery/dist/jquery.min.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
+				           	  <copy file="${basedir}/bower_components/lodash/dist/lodash.min.js" tofile="src/main/resources/static/js/lodash/dist/lodash.min.js" overwrite="true"/>
 				           </tasks> 
 				          </configuration>	
 					</plugin>
