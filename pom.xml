@@ -152,7 +152,7 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 					<executions>
-						<!-- <execution>
+						<execution>
 							<id>exec-npm-install</id>
 							<phase>generate-sources</phase>
 							<configuration>
@@ -164,7 +164,7 @@
 							<goals>
 								<goal>exec</goal>
 							</goals>
-						</execution> -->
+						</execution>
 						<execution>
 							<id>exec-bower-install</id>
 							<phase>generate-sources</phase>
@@ -179,10 +179,10 @@
 							</goals>
 						</execution>
 						<!-- <execution>
-							<id>exec-grunt</id>
+							<id>exec-gulp</id>
 							<phase>process-resources</phase>
 							<configuration>
-								<executable>grunt</executable>
+								<executable>gulp</executable>
 							</configuration>
 							<goals>
 								<goal>exec</goal>

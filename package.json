@@ -1,0 +1,28 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "name": "playjs",
+  "version": "1.0.0",
+  "description": "springboot and angularjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prussia/playSpring.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Prussia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prussia/playSpring/issues"
+  },
+  "homepage": "https://github.com/Prussia/playSpring#readme"
+}
