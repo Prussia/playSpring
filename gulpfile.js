@@ -1,18 +1,18 @@
 
 /**
  * to install gulp plugins
- * npm install gulp-util 
- * gulp-imagemin 
- * gulp-ruby-sass 
- * gulp-minify-css 
- * gulp-jshint 
- * gulp-uglify 
- * gulp-rename 
- * gulp-concat 
- * gulp-clean 
- * gulp-notify
- * gulp-livereload 
- * tiny-lr 
+ * npm install gulp-util --save-dev
+	npm install gulp-imagemin --save-dev
+	npm install gulp-ruby-sass --save-dev
+	npm install gulp-clean-css --save-dev
+	npm install gulp-jshint --save-dev
+	npm install gulp-uglify --save-dev
+	npm install gulp-rename --save-dev
+	npm install gulp-concat --save-dev
+	npm install gulp-clean --save-dev
+	npm install gulp-notify --save-dev
+	npm install gulp-livereload --save-dev
+	npm install tiny-lr --save-dev
  * --save-dev
  */
 
