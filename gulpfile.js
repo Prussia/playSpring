@@ -1,10 +1,22 @@
 
 /**
  * to install gulp plugins
- * npm install gulp-util gulp-imagemin gulp-ruby-sass gulp-minify-css gulp-jshint gulp-uglify gulp-rename gulp-concat gulp-clean gulp-livereload tiny-lr --save-dev
+ * npm install gulp-util 
+ * gulp-imagemin 
+ * gulp-ruby-sass 
+ * gulp-minify-css 
+ * gulp-jshint 
+ * gulp-uglify 
+ * gulp-rename 
+ * gulp-concat 
+ * gulp-clean 
+ * gulp-notify
+ * gulp-livereload 
+ * tiny-lr 
+ * --save-dev
  */
 
-// 引入 gulp及组件
+// gulp components
 var gulp    = require('gulp'),                 //basis
     imagemin = require('gulp-imagemin'),       //image compass
     sass = require('gulp-ruby-sass'),          //sass
@@ -15,7 +27,6 @@ var gulp    = require('gulp'),                 //basis
     rename = require('gulp-rename'),           //rename
     concat  = require('gulp-concat'),          // 
     clean = require('gulp-clean'),             //clean folder
-<<<<<<< HEAD
     notify = require('gulp-notify'),           //
     tinylr = require('tiny-lr'),               //livereload
     server = tinylr(),
