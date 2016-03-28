@@ -1,3 +1,9 @@
+spring admin for performance monitor
+1. http://www.jianshu.com/p/e20a5f42a395
+Spring Boot Admin就是将Spring Boot Actuator中提供的endpoint信息可视化表示，在BookPub应用（被监控）的这一端，只需要进行一点配置即可。
+
+springboot test -- webIntegration
+
 TODO
 
 1. Spring with MongoDB ----  Prerequisites MongoDB Java Driver 3.0.0, Spark 1.1.1, FreeMarker 2.3.19, mongoProc 3.0+

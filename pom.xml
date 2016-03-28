@@ -73,9 +73,8 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.easymock</groupId>
@@ -148,7 +147,7 @@
 	</profiles>
 	<build>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 					<executions>
@@ -178,7 +177,7 @@
 								<goal>exec</goal>
 							</goals>
 						</execution>
-						<!-- <execution>
+						<execution>
 							<id>exec-gulp</id>
 							<phase>process-resources</phase>
 							<configuration>
@@ -187,9 +186,9 @@
 							<goals>
 								<goal>exec</goal>
 							</goals>
-						</execution>  -->
+						</execution> 
 				</executions>
-			</plugin>
+			</plugin> -->
 		
 			
 			
@@ -231,6 +230,15 @@
 			<name>Spring Releases</name>
 			<url>https://repo.spring.io/libs-release</url>
 		</repository>
+		<repository>  
+            <id>spring-milestones</id>  
+            <url>http://repo.spring.io/milestone</url>  
+        </repository> 
+        <repository>  
+            <id>spring-snapshots</id>  
+            <url>http://repo.spring.io/snapshot</url>  
+            <snapshots><enabled>true</enabled></snapshots>  
+        </repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -243,6 +251,14 @@
 			<name>Spring Releases</name>
 			<url>https://repo.spring.io/libs-release</url>
 		</pluginRepository>
+		<pluginRepository>  
+            <id>spring-milestones</id>  
+            <url>http://repo.spring.io/milestone</url>  
+        </pluginRepository>
+        <pluginRepository>  
+            <id>spring-snapshots</id>  
+            <url>http://repo.spring.io/snapshot</url>  
+        </pluginRepository>  
 	</pluginRepositories>
 
 </project>
