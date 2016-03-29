@@ -46,6 +46,12 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!-- Spring Boot Actuator includes a number of additional features to help 
+			you monitor and manage your application when it’s pushed to production. You 
+			can choose to manage and monitor your application using HTTP endpoints, with 
+			JMX or even by remote shell (SSH or Telnet). Auditing, health and metrics 
+			gathering can be automatically applied to your application. 
+			https://github.com/spring-projects/spring-boot/tree/master/spring-boot-actuator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -93,25 +99,34 @@
 			<build>
 				<plugins>
 					<plugin>
-		       			  <groupId>org.apache.maven.plugins</groupId>
-				          <artifactId>maven-antrun-plugin</artifactId>
-				          <executions>
-					          <execution>
-						            <id>mvn-antrun-process-resources</id>
-						            <phase>process-resources</phase>
-						            <goals>
-						             	<goal>run</goal>
-						            </goals>
-					          </execution>
-				          </executions>
-				          <configuration>
-				            <tasks>
-				              <copy file="${basedir}/bower_components/angular/angular.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/jquery/dist/jquery.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/lodash/dist/lodash.js" tofile="src/main/resources/static/js/lodash/dist/lodash.min.js" overwrite="true"/>
-				            </tasks> 
-				          </configuration>	
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>mvn-antrun-process-resources</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<tasks>
+								<copy file="${basedir}/bower_components/angular/angular.js"
+									tofile="src/main/resources/static/js/angular/angular.min.js"
+									overwrite="true" />
+								<copy
+									file="${basedir}/bower_components/angular-resource/angular-resource.js"
+									tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js"
+									overwrite="true" />
+								<copy file="${basedir}/bower_components/jquery/dist/jquery.js"
+									tofile="src/main/resources/static/js/jquery/jquery.min.js"
+									overwrite="true" />
+								<copy file="${basedir}/bower_components/lodash/dist/lodash.js"
+									tofile="src/main/resources/static/js/lodash/dist/lodash.min.js"
+									overwrite="true" />
+							</tasks>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
@@ -121,25 +136,34 @@
 			<build>
 				<plugins>
 					<plugin>
-		       			  <groupId>org.apache.maven.plugins</groupId>
-				          <artifactId>maven-antrun-plugin</artifactId>
-				          <executions>
-					          <execution>
-						            <id>mvn-antrun-process-resources</id>
-						            <phase>process-resources</phase>
-						            <goals>
-						             	<goal>run</goal>
-						            </goals>
-					          </execution>
-				          </executions>
-				          <configuration>
-				            <tasks>
-				              <copy file="${basedir}/bower_components/angular/angular.min.js" tofile="src/main/resources/static/js/angular/angular.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/angular-resource/angular-resource.min.js" tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js" overwrite="true"/>
-				              <copy file="${basedir}/bower_components/jquery/dist/jquery.min.js" tofile="src/main/resources/static/js/jquery/jquery.min.js" overwrite="true"/>
-				           	  <copy file="${basedir}/bower_components/lodash/dist/lodash.min.js" tofile="src/main/resources/static/js/lodash/dist/lodash.min.js" overwrite="true"/>
-				           </tasks> 
-				          </configuration>	
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>mvn-antrun-process-resources</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<tasks>
+								<copy file="${basedir}/bower_components/angular/angular.min.js"
+									tofile="src/main/resources/static/js/angular/angular.min.js"
+									overwrite="true" />
+								<copy
+									file="${basedir}/bower_components/angular-resource/angular-resource.min.js"
+									tofile="src/main/resources/static/js/angular-resource/angular-resource.min.js"
+									overwrite="true" />
+								<copy file="${basedir}/bower_components/jquery/dist/jquery.min.js"
+									tofile="src/main/resources/static/js/jquery/jquery.min.js"
+									overwrite="true" />
+								<copy file="${basedir}/bower_components/lodash/dist/lodash.min.js"
+									tofile="src/main/resources/static/js/lodash/dist/lodash.min.js"
+									overwrite="true" />
+							</tasks>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
@@ -147,51 +171,19 @@
 	</profiles>
 	<build>
 		<plugins>
-			<!-- <plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-					<executions>
-						<execution>
-							<id>exec-npm-install</id>
-							<phase>generate-sources</phase>
-							<configuration>
-								<executable>npm</executable>
-								<arguments>
-									<argument>install</argument>
-								</arguments>
-							</configuration>
-							<goals>
-								<goal>exec</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>exec-bower-install</id>
-							<phase>generate-sources</phase>
-							<configuration>
-								<executable>bower</executable>
-								<arguments>
-									<argument>install</argument>
-								</arguments>
-							</configuration>
-							<goals>
-								<goal>exec</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>exec-gulp</id>
-							<phase>process-resources</phase>
-							<configuration>
-								<executable>gulp</executable>
-							</configuration>
-							<goals>
-								<goal>exec</goal>
-							</goals>
-						</execution> 
-				</executions>
-			</plugin> -->
-		
-			
-			
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
+				<executions> <execution> <id>exec-npm-install</id> <phase>generate-sources</phase> 
+				<configuration> <executable>npm</executable> <arguments> <argument>install</argument> 
+				</arguments> </configuration> <goals> <goal>exec</goal> </goals> </execution> 
+				<execution> <id>exec-bower-install</id> <phase>generate-sources</phase> <configuration> 
+				<executable>bower</executable> <arguments> <argument>install</argument> </arguments> 
+				</configuration> <goals> <goal>exec</goal> </goals> </execution> <execution> 
+				<id>exec-gulp</id> <phase>process-resources</phase> <configuration> <executable>gulp</executable> 
+				</configuration> <goals> <goal>exec</goal> </goals> </execution> </executions> 
+				</plugin> -->
+
+
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -230,15 +222,17 @@
 			<name>Spring Releases</name>
 			<url>https://repo.spring.io/libs-release</url>
 		</repository>
-		<repository>  
-            <id>spring-milestones</id>  
-            <url>http://repo.spring.io/milestone</url>  
-        </repository> 
-        <repository>  
-            <id>spring-snapshots</id>  
-            <url>http://repo.spring.io/snapshot</url>  
-            <snapshots><enabled>true</enabled></snapshots>  
-        </repository>
+		<repository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</repository>
+		<repository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -251,14 +245,14 @@
 			<name>Spring Releases</name>
 			<url>https://repo.spring.io/libs-release</url>
 		</pluginRepository>
-		<pluginRepository>  
-            <id>spring-milestones</id>  
-            <url>http://repo.spring.io/milestone</url>  
-        </pluginRepository>
-        <pluginRepository>  
-            <id>spring-snapshots</id>  
-            <url>http://repo.spring.io/snapshot</url>  
-        </pluginRepository>  
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+		</pluginRepository>
 	</pluginRepositories>
 
 </project>
