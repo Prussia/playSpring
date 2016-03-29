@@ -12,6 +12,11 @@ public class AssesorBean implements RiskAssessorService {
 	@Override
 	public void createAcctount(String accountNo, String username) {
 		// TODO Auto-generated method stub
-		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -17,8 +17,14 @@
 package com.prussia.test.play.spring.service.aop;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -26,12 +32,58 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class ServiceMonitor {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(ServiceMonitor.class);
 
-	@AfterReturning("execution(* com.prussia.test.play..*ServiceBean.*(..))")
-	public void logServiceAccess(JoinPoint joinPoint) {
-		logger.warn("Completed: " + joinPoint);
+	/*
+	2016-03-29 21:43:19.596  WARN 1608 --- [nio-8080-exec-1] c.p.t.p.s.service.aop.ServiceMonitor     : around start.., execution(void com.prussia.test.play.spring.service.AccountService.createAcctount(String,String)) 
+	2016-03-29 21:43:19.596  WARN 1608 --- [nio-8080-exec-1] c.p.t.p.s.service.aop.ServiceMonitor     : before aspect executing, execution(void com.prussia.test.play.spring.service.AccountService.createAcctount(String,String))
+	2016-03-29 21:43:19.596  WARN 1608 --- [nio-8080-exec-1] c.p.t.p.s.service.aop.ServiceMonitor     : around end, execution(void com.prussia.test.play.spring.service.AccountService.createAcctount(String,String)) 
+	2016-03-29 21:43:19.596  WARN 1608 --- [nio-8080-exec-1] c.p.t.p.s.service.aop.ServiceMonitor     : after aspect executed, execution(void com.prussia.test.play.spring.service.AccountService.createAcctount(String,String))
+	2016-03-29 21:43:19.596  WARN 1608 --- [nio-8080-exec-1] c.p.t.p.s.service.aop.ServiceMonitor     : afterReturning executed, execution(void com.prussia.test.play.spring.service.AccountService.createAcctount(String,String)), return result is null 
+ 
+	 */
+
+	@Pointcut("execution(* com.prussia.test.play..*ServiceBean.*(..))")
+	public void pointCut() {
+		logger.warn("I am pointCut: " , this);
+	}
+
+	@After("pointCut()")
+	public void after(JoinPoint joinPoint) {
+		logger.warn("after aspect executed, {}", joinPoint);
+	}
+
+	@Before("pointCut()")
+	public void before(JoinPoint joinPoint) {
+		// 如果需要这里可以取出参数进行处理
+		// Object[] args = joinPoint.getArgs();
+		logger.warn("before aspect executing, {}", joinPoint);
+	}
+
+	@AfterReturning(pointcut = "pointCut()", returning = "returnVal")
+	public void afterReturning(JoinPoint joinPoint, Object returnVal) {
+		logger.warn("afterReturning executed, {}, return result is {} ", joinPoint , returnVal);
+	}
+
+	@Around("pointCut()")
+	public void around(ProceedingJoinPoint pjp) throws Throwable {
+		logger.warn("around start.., {} ", pjp);
+		long start = System.currentTimeMillis();
+		try {
+			pjp.proceed();
+		} catch (Throwable ex) {
+			System.out.println("error in around");
+			throw ex;
+		} finally {
+			logger.warn("around end, {}, the time consuming: {} seconds", pjp, (System.currentTimeMillis() - start)/1000);
+        }
+		
+	}
+
+	@AfterThrowing(pointcut = "pointCut()", throwing = "error")
+	public void afterThrowing(JoinPoint jp, Throwable error) {
+		logger.warn("error:" + error);
 	}
 
 }
