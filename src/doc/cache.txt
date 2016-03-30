@@ -1,5 +1,8 @@
 http://www.tuicool.com/articles/m2qAfqn
 
+bean validation
+http://jinnianshilongnian.iteye.com/blog/1990081
+
 
 @Service
 public class CacheDemoServiceImpl implements CacheDemoService {
