@@ -4,9 +4,17 @@ https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/s
 2. spring-boot-sample-cache
 https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-cache
 
-3. springboot test -- webIntegration
+3. 
+Spring Boot is registering PlatformTransactionManager bean, and you're trying to inject DataSourceTransactionManager. If you'll change to proper class it will work out of the box:
 
-4. springboot admin for performance monitor
+@Autowired
+private PlatformTransactionManager transactionManager;
+
+
+
+4. springboot test -- webIntegration
+
+5. springboot admin for performance monitor
 http://www.jianshu.com/p/e20a5f42a395
 Spring Boot Admin就是将Spring Boot Actuator中提供的endpoint信息可视化表示，在BookPub应用（被监控）的这一端，只需要进行一点配置即可。
 
