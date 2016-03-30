@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.web;
+package com.prussia.test.play.spring.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

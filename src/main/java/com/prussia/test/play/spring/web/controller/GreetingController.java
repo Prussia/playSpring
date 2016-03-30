@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.web;
+package com.prussia.test.play.spring.web.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 

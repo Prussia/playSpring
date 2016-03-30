@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.web;
+package com.prussia.test.play.spring.web.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

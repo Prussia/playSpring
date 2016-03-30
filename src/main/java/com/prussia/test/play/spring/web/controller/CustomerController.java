@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.web;
+package com.prussia.test.play.spring.web.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
