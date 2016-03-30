@@ -16,6 +16,8 @@
 
 package com.prussia.test.play.spring.service.aop;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -29,11 +31,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.prussia.test.play.spring.service.aop.PerfInterceptor.MethodStats;
+
 @Aspect
 @Component
 public class ServiceMonitor {
 
 	private static final Logger logger = LoggerFactory.getLogger(ServiceMonitor.class);
+	
+	 private static ConcurrentHashMap<String, MethodStats> methodStats = new ConcurrentHashMap<String, MethodStats>();
+	 private static long statLogFrequency = 10;
+	 private static long methodWarningThreshold = 1000;
 
 	/*
 	2016-03-29 21:43:19.596  WARN 1608 --- [nio-8080-exec-1] c.p.t.p.s.service.aop.ServiceMonitor     : around start.., execution(void com.prussia.test.play.spring.service.AccountService.createAcctount(String,String)) 
@@ -67,16 +75,18 @@ public class ServiceMonitor {
 	}
 
 	@Around("pointCut()")
-	public void around(ProceedingJoinPoint pjp) throws Throwable {
-		logger.warn("around start.., {} ", pjp);
+	public void around(ProceedingJoinPoint joinPoint) throws Throwable {
+		logger.warn("around start.., {} ", joinPoint);
 		long start = System.currentTimeMillis();
 		try {
-			pjp.proceed();
+			joinPoint.proceed();
 		} catch (Throwable ex) {
-			System.out.println("error in around");
 			throw ex;
 		} finally {
-			logger.warn("around end, {}, the time consuming: {} seconds", pjp, (System.currentTimeMillis() - start)/1000);
+			logger.warn("ServiceMonitor:" + joinPoint.getSignature().getName() + " takes "
+					+ (System.currentTimeMillis() - start) + "ms");
+			
+			updateStats(joinPoint.getSignature().getName(),(System.currentTimeMillis() - start));
         }
 		
 	}
@@ -85,5 +95,45 @@ public class ServiceMonitor {
 	public void afterThrowing(JoinPoint jp, Throwable error) {
 		logger.warn("error:" + error);
 	}
+	
+	private void updateStats(String methodName, long elapsedTime) {
+        MethodStats stats = methodStats.get(methodName);
+        if(stats == null) {
+            stats = new MethodStats(methodName);
+            methodStats.put(methodName,stats);
+        }
+        stats.count++;
+        stats.totalTime += elapsedTime;
+        if(elapsedTime > stats.maxTime) {
+            stats.maxTime = elapsedTime;
+        }
+        
+        if(elapsedTime > methodWarningThreshold) {
+            logger.warn("method warning: " + methodName + "(), count = " + stats.count + ", lastTime = " + elapsedTime + ", maxTime = " + stats.maxTime);
+        }
+        
+        if(logger.isDebugEnabled()){
+	        if(stats.count % statLogFrequency == 0) {
+	            long avgTime = stats.totalTime / stats.count;
+	            long runningAvg = (stats.totalTime-stats.lastTotalTime) / statLogFrequency;
+	            logger.debug("method: " + methodName + "(), count = " + stats.count + ", lastTime = " + elapsedTime + ", avgTime = " + avgTime + ", runningAvg = " + runningAvg + ", maxTime = " + stats.maxTime);
+	            
+	            //reset the last total time
+	            stats.lastTotalTime = stats.totalTime;   
+	        }
+        }
+    }
+    
+    class MethodStats {
+        public String methodName;
+        public long count;
+        public long totalTime;
+        public long lastTotalTime;
+        public long maxTime;
+        
+        public MethodStats(String methodName) {
+            this.methodName = methodName;
+        }
+    }
 
 }
