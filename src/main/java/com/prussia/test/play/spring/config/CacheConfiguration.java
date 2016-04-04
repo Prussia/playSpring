@@ -23,11 +23,6 @@ public class CacheConfiguration {
 	// cacheManager.shutdown();
 	// }
 
-	/**
-	 * TODO Not sure why there is no class EhCacheCacheManager in spring cache
-	 * package
-	 */
-
 	/*
 	 * ehcache 主要的管理器
 	 */
