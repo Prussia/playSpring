@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,12 +21,16 @@ import com.prussia.test.play.spring.domain.Quote;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-public class Application implements CommandLineRunner {
+public class Application extends SpringBootServletInitializer implements CommandLineRunner  {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
 	@Autowired
 	MyDao mydao;
+	
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application){
+		return application.sources(Application.class); //start up in war
+	}
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
