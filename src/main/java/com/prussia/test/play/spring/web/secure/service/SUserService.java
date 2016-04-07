@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.web.secure;
+package com.prussia.test.play.spring.web.secure.service;
 
 import java.util.List;
 

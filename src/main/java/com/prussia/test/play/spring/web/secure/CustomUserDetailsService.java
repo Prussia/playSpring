@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import com.prussia.test.play.spring.web.secure.bean.SUser;
+import com.prussia.test.play.spring.web.secure.service.SUserService;
 
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
