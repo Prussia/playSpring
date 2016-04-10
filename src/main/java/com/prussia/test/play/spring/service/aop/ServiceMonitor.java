@@ -75,11 +75,12 @@ public class ServiceMonitor {
 	}
 
 	@Around("pointCut()")
-	public void around(ProceedingJoinPoint joinPoint) throws Throwable {
+	public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
 		logger.warn("around start.., {} ", joinPoint);
 		long start = System.currentTimeMillis();
+		Object o = null;
 		try {
-			joinPoint.proceed();
+			o = joinPoint.proceed();
 		} catch (Throwable ex) {
 			throw ex;
 		} finally {
@@ -88,7 +89,7 @@ public class ServiceMonitor {
 			
 			updateStats(joinPoint.getSignature().getName(),(System.currentTimeMillis() - start));
         }
-		
+		return o;
 	}
 
 	@AfterThrowing(pointcut = "pointCut()", throwing = "error")
