@@ -5,7 +5,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy;
 
 import groovy.util.logging.Slf4j;
 
@@ -24,7 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
 		.sessionFixation()
-		.none()
+		.none().maximumSessions(1)
+		.and().invalidSessionUrl("/api/login/invalid")
 //		.changeSessionId()
 //		.migrateSession()
 		
