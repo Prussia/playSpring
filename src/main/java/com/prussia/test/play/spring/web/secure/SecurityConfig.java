@@ -23,7 +23,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //		.loginPage("/login.jsp").permitAll()
 		.and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
-		.sessionAuthenticationStrategy(new SessionFixationProtectionStrategy())
+		.sessionFixation()
+		.none()
+//		.changeSessionId()
+//		.migrateSession()
+		
 		;
 	}
 
