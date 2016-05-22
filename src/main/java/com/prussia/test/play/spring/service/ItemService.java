@@ -2,7 +2,7 @@ package com.prussia.test.play.spring.service;
 
 import java.util.List;
 
-import com.prussia.test.play.spring.domain.Item;
+import com.prussia.test.play.spring.domain.vo.Item;
 
 public interface ItemService {
 

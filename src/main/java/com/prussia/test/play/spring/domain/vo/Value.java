@@ -1,4 +1,4 @@
-package com.prussia.test.play.spring.domain;
+package com.prussia.test.play.spring.domain.vo;
 
 public class Value {
 
