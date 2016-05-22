@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.prussia.test.play.spring.domain.vo.Item;
 
+
 public interface ItemService {
 
 	public List<Item> findAll();
