@@ -10,33 +10,33 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.prussia.test.play.spring.domain.Item;
-import com.prussia.test.play.spring.repository.ItemRepository;
+import com.prussia.test.play.spring.service.ItemService;
 
 @RestController
 @RequestMapping("/items")
 public class ItemController {
   @Autowired
-  private ItemRepository repo;
+  private ItemService service;
   
   @RequestMapping(method = RequestMethod.GET)
   public List<Item> findItems() {
-    return repo.findAll();
+    return service.findAll();
   }
   
   @RequestMapping(method = RequestMethod.POST)
   public Item addItem(@RequestBody Item item) {
     item.setId(null);
-    return repo.saveAndFlush(item);
+    return service.saveAndFlush(item);
   }
   
   @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
   public Item updateItem(@RequestBody Item updatedItem, @PathVariable Integer id) {
     updatedItem.setId(id);
-    return repo.saveAndFlush(updatedItem);
+    return service.saveAndFlush(updatedItem);
   }
   
   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
   public void deleteItem(@PathVariable Integer id) {
-    repo.delete(id);
+    service.delete(id);
   }
 }
