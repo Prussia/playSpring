@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.prussia.test.play.spring.dao.CachableCustomerDao;
 import com.prussia.test.play.spring.dao.CustomerDao;
-import com.prussia.test.play.spring.domain.Customer;
+import com.prussia.test.play.spring.domain.po.Customer;
 
 @RestController
 @RequestMapping("/customer")

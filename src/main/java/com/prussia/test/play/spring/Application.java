@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 import com.prussia.test.play.spring.dao.MyDao;
-import com.prussia.test.play.spring.domain.Quote;
+import com.prussia.test.play.spring.domain.po.Quote;
 
 @Configuration
 @EnableAutoConfiguration

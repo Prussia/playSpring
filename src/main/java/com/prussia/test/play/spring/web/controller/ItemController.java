@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prussia.test.play.spring.domain.Item;
+import com.prussia.test.play.spring.domain.po.Item;
 import com.prussia.test.play.spring.service.ItemService;
 
 @RestController

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prussia.test.play.spring.domain.Greeting;
+import com.prussia.test.play.spring.domain.po.Greeting;
 @Scope("request") // the default controller scope is singleton. so set it to prototype, request or session
 @RestController
 public class GreetingController {

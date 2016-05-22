@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.prussia.test.play.spring.domain.Item;
+import com.prussia.test.play.spring.domain.po.Item;
 import com.prussia.test.play.spring.repository.ItemRepository;
 /**
  * to conert po to vo then introduce dozer
