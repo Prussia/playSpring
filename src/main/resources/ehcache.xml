@@ -4,7 +4,7 @@
 	<cache name="com.prussia.test.play.spring.domain.Customer" ></cache> 
 	<defaultCache eternal="false" overflowToDisk="false"
 		maxElementsInMemory="10000" timeToIdleSeconds="3600"
-		timeToLiveSeconds="36000" />
+		timeToLiveSeconds="360" />
 </ehcache>
 
 <!-- 

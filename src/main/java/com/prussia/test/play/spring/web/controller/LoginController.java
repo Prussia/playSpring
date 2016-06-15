@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
+
 //@Scope("request")
 @RestController
 @RequestMapping("/api")
+@Slf4j
 public class LoginController {
 
 	private static final Logger log = LoggerFactory.getLogger(LoginController.class);
@@ -30,6 +33,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestBody Map<String,String> map, HttpSession session) {
+		log.info("This is the log info");
 //		decrypt the password
 		
 //		model.addAttribute("param.logout", false);
