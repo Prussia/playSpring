@@ -21,8 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class LoginController {
 
-	private static final Logger log = LoggerFactory.getLogger(LoginController.class);
-
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public Map<?,?> loginPage(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password) {
 		Map<String,String> params = new HashMap<String,String>();
