@@ -6,7 +6,18 @@ import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-
+/**
+ *  http://docs.spring.io/spring/docs/current/spring-framework-reference/html/cache.html
+ *  spring-boot-sample-cache
+	https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-cache
+ *	@Cacheable triggers cache population
+ *	@CacheEvict triggers cache eviction
+ *	@CachePut updates the cache without interfering with the method execution
+ *	@Caching regroups multiple cache operations to be applied on a method
+ *	@CacheConfig shares some common cache-related settings at class-level
+ * @author phu021
+ *
+ */
 @Configuration
 @EnableCaching // delete it if to be disable caching
 public class CacheConfiguration {
