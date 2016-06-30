@@ -16,6 +16,10 @@ private PlatformTransactionManager transactionManager;
 http://www.jianshu.com/p/e20a5f42a395
 Spring Boot Admin就是将Spring Boot Actuator中提供的endpoint信息可视化表示，在BookPub应用（被监控）的这一端，只需要进行一点配置即可。
 
+7. spring integration 
+http://docs.spring.io/spring-integration/docs/latest-ga/reference/html/overview.html#overview-background
+
+https://github.com/spring-projects/spring-integration-samples
 
 
 TODO
