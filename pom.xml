@@ -12,6 +12,30 @@
 	<name>playspring</name>
 	<url>https://github.com/Prussia/playSpring</url>
 
+	<organization>
+		<name>PrussiaHu</name>
+		<url>https://github.com/Prussia</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>phu</id>
+			<name>Prussia Hu</name>
+			<email>prussia.hu@gmail.com</email>
+			<roles>
+				<role>project owner</role>
+			</roles>
+		</developer>
+		
+	</developers>
+
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -112,7 +136,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.14.8</version>
+			<version>1.16.8</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
