@@ -43,6 +43,7 @@
 		<lombok.version>1.16.8</lombok.version>
 		<poi.version>3.14</poi.version>
 		<easymock.version>3.4</easymock.version>
+		<sqljdbc.version>4.2</sqljdbc.version>
 	</properties>
 
 	<parent>
@@ -147,8 +148,9 @@
 			<version>${lombok.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>${sqljdbc.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
