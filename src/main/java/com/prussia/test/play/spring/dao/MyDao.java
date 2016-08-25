@@ -21,7 +21,7 @@ public class MyDao {
 	JdbcTemplate jdbcTemplate;
 
 	@Transactional
-	public void accessRelationDBbyTemplate() {
+	public void accessRelationDBbyTemplate4mysql() {
 		log.info("Creating tables");
 
 		createTables();

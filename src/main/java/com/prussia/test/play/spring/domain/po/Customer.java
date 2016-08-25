@@ -20,6 +20,8 @@ public class Customer implements Serializable{
 	private String lastName;
 
 	private Date createdDate;
+	
+	private Date updatedDate;
 
 	public Customer() {
 		super();
@@ -62,6 +64,14 @@ public class Customer implements Serializable{
 
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
+	}
+	
+	public Date getUpdatedDate(){
+		return this.createdDate;
+	}
+	
+	public void setUpdatedDate(Date updatedDate){
+		this.updatedDate = updatedDate;
 	}
 
 	@Override

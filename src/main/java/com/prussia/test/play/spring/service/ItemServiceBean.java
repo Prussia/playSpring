@@ -6,6 +6,7 @@ import java.util.List;
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.prussia.test.play.spring.domain.vo.Item;
 import com.prussia.test.play.spring.repository.ItemRepository;
@@ -14,6 +15,7 @@ import com.prussia.test.play.spring.repository.ItemRepository;
  * @author N551JM
  *
  */
+@Service
 public class ItemServiceBean implements ItemService {
 	@Autowired
 	private ItemRepository repo;

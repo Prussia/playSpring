@@ -55,7 +55,7 @@ public class Application extends SpringBootServletInitializer implements Command
 
 	public void run(String... strings) throws Exception {
 		// consumeREST();
-		mydao.accessRelationDBbyTemplate();
+		//mydao.accessRelationDBbyTemplate4mysql();
 	}
 
 	/**
