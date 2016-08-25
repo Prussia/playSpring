@@ -3,16 +3,13 @@ package com.prussia.test.play.spring.domain.vo;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Customer implements Serializable{
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -652845573981489891L;
+
 	private long id;
 
 	private String firstName;

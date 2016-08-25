@@ -1,16 +1,8 @@
 package com.prussia.test.play.spring.domain.vo;
 
-import javax.persistence.*;
-
-
-@Entity
 public class Item {
-  @Id
-  @GeneratedValue(strategy=GenerationType.IDENTITY)
   private Integer id;
-  @Column
   private boolean checked;
-  @Column
   private String description;
 
   public Integer getId() {
