@@ -32,7 +32,7 @@
 				<role>project owner</role>
 			</roles>
 		</developer>
-		
+
 	</developers>
 
 
@@ -62,7 +62,7 @@
 				</exclusion>
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
-            				<artifactId>spring-boot-starter-jetty</artifactId>
+					<artifactId>spring-boot-starter-jetty</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
