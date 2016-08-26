@@ -22,9 +22,10 @@ public class DataSourceConfiguration {
 	
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource")
-	@Description("MySql data source")
+	@Description("msSql data source")
 	public DataSource getDataSource() {
-		return DataSourceBuilder.create().build();
+		DataSource ds =  DataSourceBuilder.create().build();
+		return ds;
 	}
 	
 }
