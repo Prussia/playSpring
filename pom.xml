@@ -44,6 +44,7 @@
 		<poi.version>3.14</poi.version>
 		<easymock.version>3.4</easymock.version>
 		<sqljdbc.version>4.2</sqljdbc.version>
+		<swagger.version>2.4.0</swagger.version>
 	</properties>
 
 	<parent>
@@ -157,6 +158,19 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>${poi.version}</version>
 		</dependency>
+		
+		<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+            <scope>compile</scope>
+        </dependency>
 	</dependencies>
 
 	<build>

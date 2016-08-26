@@ -16,7 +16,7 @@ import com.prussia.test.play.spring.dao.CustomerDao;
 import com.prussia.test.play.spring.domain.po.Customer;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/api/customer")
 public class CustomerController {
 	
 	private static final Logger log = LoggerFactory.getLogger(CustomerController.class);

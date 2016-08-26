@@ -25,7 +25,7 @@ public class GreetingsController {
 	AccountService service;
 	
 	
-	@RequestMapping("/greetings")
+	@RequestMapping("/api/greetings")
 	public String greetingTp(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
 			Model model) {
 		model.addAttribute("name", name);

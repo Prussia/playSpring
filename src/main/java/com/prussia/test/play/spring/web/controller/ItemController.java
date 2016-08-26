@@ -13,7 +13,7 @@ import com.prussia.test.play.spring.domain.vo.Item;
 import com.prussia.test.play.spring.service.ItemService;
 
 @RestController
-@RequestMapping("/items")
+@RequestMapping("/api/items")
 public class ItemController {
   @Autowired
   private ItemService service;

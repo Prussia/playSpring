@@ -27,7 +27,7 @@ public class GreetingController {
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping("/greeting")
+	@RequestMapping("/api/greeting")
 	public Greeting greeting(@RequestParam(value="name", defaultValue = "world") String name) throws Exception{
 		log.info("Thread name = {}", Thread.currentThread().getName());
 		log.info("longNumber = {}", longNumber);

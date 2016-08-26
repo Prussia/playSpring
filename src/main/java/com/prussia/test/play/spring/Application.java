@@ -2,7 +2,6 @@ package com.prussia.test.play.spring;
 
 import java.util.Locale;
 
-import org.jsondoc.spring.boot.starter.EnableJSONDoc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,6 @@ import com.prussia.test.play.spring.dao.MyDao;
 import com.prussia.test.play.spring.domain.po.Quote;
 
 @SpringBootApplication
-@EnableJSONDoc
 public class Application extends SpringBootServletInitializer implements CommandLineRunner  {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);

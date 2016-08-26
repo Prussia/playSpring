@@ -12,14 +12,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
+@RequestMapping("/api/upload")
 public class FileUploadController {
 
-	@RequestMapping(value = "/upload", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody String provideUploadInfo() {
 		return "You can upload a file by posting to this same URL";
 	}
 
-	@RequestMapping(value = "/upload", method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST)
 	public @ResponseBody String handleFileUpload(@RequestParam("name") String name,
 			@RequestParam("file") MultipartFile file) {
 		if (!file.isEmpty()) {
