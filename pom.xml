@@ -45,7 +45,7 @@
 		<easymock.version>3.4</easymock.version>
 		<sqljdbc.version>4.2</sqljdbc.version>
 		<swagger.version>2.4.0</swagger.version>
-		<kie.version>6.3.0.Final</kie.version>
+		<kie.version>6.4.0.Final</kie.version>
 	</properties>
 
 	<parent>
