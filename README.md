@@ -20,11 +20,13 @@ Personal Project to practice and record the esamples on Springboot
 
 **TODO**
 - Logback Implementation
+- Groovy Template Engine
 - Validation Constraint
 - Swagger annotation @apioperation @api
+- Websocket
+
 - Mongo connection
 - Spring security loginProvider and Auth Token
 - Gradle Implementation
-- Groovy Template Engine
 - Spring Integration
 - Spring Oauth2
