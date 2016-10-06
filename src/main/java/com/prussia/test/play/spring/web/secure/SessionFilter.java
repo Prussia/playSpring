@@ -17,7 +17,6 @@ import com.prussia.test.play.spring.domain.vo.Customer;
 import com.prussia.test.play.spring.domain.vo.Value;
 
 import lombok.extern.slf4j.Slf4j;
-
  
 @Slf4j
 public class SessionFilter extends GenericFilterBean {
