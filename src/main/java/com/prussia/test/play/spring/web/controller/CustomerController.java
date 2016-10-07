@@ -1,7 +1,5 @@
 package com.prussia.test.play.spring.web.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +11,12 @@ import com.prussia.test.play.spring.dao.CachableCustomerDao;
 import com.prussia.test.play.spring.dao.CustomerDao;
 import com.prussia.test.play.spring.domain.po.Customer;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/api/customer")
+@Slf4j
 public class CustomerController {
-	
-	private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
-
 	
 	@Autowired
 	//@Qualifier ( "customerDao" ) //inject by specific name
