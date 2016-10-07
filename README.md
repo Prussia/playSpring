@@ -17,9 +17,9 @@ Personal Project to practice and record the esamples on Springboot
 - *gzip compression in tomcat to improve the performance of front-end*
 - *Spring Data JPA*
 - *dozer to transfer from PO to VO* 
+- Groovy Template Engine
 
 **TODO**
-- Groovy Template Engine
 - Validation Constraint
 - Swagger annotation @apioperation @api
 - Websocket
