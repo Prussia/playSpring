@@ -155,7 +155,10 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>${poi.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-templates</artifactId>
+		</dependency>
 
 		<!-- Drools -->
 		<dependency>
