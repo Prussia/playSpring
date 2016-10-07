@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 
 //@Scope("request")
@@ -27,6 +28,7 @@ public class LoginController {
 		return params;
 	}
 
+	@ApiOperation("login description")
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestBody Map<String,String> map, HttpSession session) {
 		log.info("This is the log info");
