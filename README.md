@@ -13,6 +13,7 @@ Personal Project to practice and record the esamples on Springboot
 - *logback*
 - *Spring Test - web integration test*
 - *Swagger* 
+	* annotation @apioperation
 - *Performance Monitor* 
 - *gzip compression in tomcat to improve the performance of front-end*
 - *Spring Data JPA*
@@ -20,8 +21,7 @@ Personal Project to practice and record the esamples on Springboot
 - Groovy Template Engine
 - Validation Constraint
 
-**TODO**
-- Swagger annotation @apioperation @api
+**TODO**   
 - Websocket
 - Mongo connection
 - Spring security loginProvider and Auth Token
