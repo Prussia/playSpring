@@ -31,8 +31,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.prussia.test.play.spring.service.aop.PerfInterceptor.MethodStats;
-
 @Aspect
 @Component
 public class ServiceMonitor {
