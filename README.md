@@ -10,7 +10,7 @@ Personal Project to practice and record the esamples on Springboot
 - *Mutiple Data Source JNDI Implementation for mssql/neo4j*
 - *lombok*
 - *i18n samples*
-- *log4j integration*
+- *logback*
 - *Spring Test - web integration test*
 - *Swagger* 
 - *Performance Monitor* 
@@ -19,7 +19,6 @@ Personal Project to practice and record the esamples on Springboot
 - *dozer to transfer from PO to VO* 
 
 **TODO**
-- Logback Implementation
 - Groovy Template Engine
 - Validation Constraint
 - Swagger annotation @apioperation @api

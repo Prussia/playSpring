@@ -43,6 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			http.addFilterBefore(new SessionFilter(), ChannelProcessingFilter.class);
 		}
 
+		http.addFilterAfter(new SessionFilter(), ChannelProcessingFilter.class);
 	}
 
 	private boolean checkProfile4Swagger(boolean isSwagger) {
