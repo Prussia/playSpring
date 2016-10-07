@@ -18,12 +18,11 @@ Personal Project to practice and record the esamples on Springboot
 - *Spring Data JPA*
 - *dozer to transfer from PO to VO* 
 - Groovy Template Engine
+- Validation Constraint
 
 **TODO**
-- Validation Constraint
 - Swagger annotation @apioperation @api
 - Websocket
-
 - Mongo connection
 - Spring security loginProvider and Auth Token
 - Gradle Implementation
