@@ -21,10 +21,20 @@ Personal Project to practice and record the esamples on Springboot
 - Groovy Template Engine
 - Validation Constraint
 
-**TODO**   
-- Websocket
-- Mongo connection
-- Spring security loginProvider and Auth Token
+**TODO**
+- Dockerfile
+	* [docker-compose](https://docs.docker.com/compose/overview/)
+	* [Portainer](http://strl099020:9000/#/) - UI for Docker and better management
+	* [Docker Clustering Tools Compared: Kubernetes vs Docker Swarm ](https://technologyconversations.com/2015/11/04/docker-clustering-tools-compared-kubernetes-vs-docker-swarm/)
+	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
+- [travis-ci](https://travis-ci.org/)
+- Deployment
+	* [Amazon EC2](http://54.238.176.106:8180)
+- [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
+- [JWT](https://jwt.io/introduction/)
+	* JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
+	* used for **Authentication** and **Information Exchange**
+	* Single Sign On
 - Gradle Implementation
 - Spring Integration
-- Spring Oauth2
+- Spring Oauth2             
