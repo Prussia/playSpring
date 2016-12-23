@@ -37,4 +37,5 @@ Personal Project to practice and record the esamples on Springboot
 	* Single Sign On
 - Gradle Implementation
 - Spring Integration
-- Spring Oauth2             
+- Spring Oauth2    
+- Websocket         
