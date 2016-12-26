@@ -1,4 +1,26 @@
 language: java
-jdk:
-  - oraclejdk8
+
+sudo: false
+
+cache:
+  apt: true
+  directories:
+    - ~/.m2
+
+branches:
+  only:
+    - master
+
+install:
+  -
   
+matrix:
+  fast_finish: true
+  include:
+    - jdk: oraclejdk8
+      env:
+        - DESC="clean compile"
+        - CMD="mvn clean compile -DskipTests"
+        - COVERAGE_CMD=""
+        - DEPLOY="false"
+
