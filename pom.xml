@@ -46,7 +46,6 @@
 		<sqljdbc.version>4.2</sqljdbc.version>
 		<swagger.version>2.4.0</swagger.version>
 		<kie.version>6.4.0.Final</kie.version>
-		<skipTests>true</skipTests>
 	</properties>
 
 	<parent>
