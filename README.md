@@ -20,6 +20,7 @@ Personal Project to practice and record the examples on Springboot
 - *dozer to transfer from PO to VO* 
 - Groovy Template Engine
 - Validation Constraint
+- [travis-ci](https://travis-ci.org/)
 
 **TODO**
 
@@ -28,7 +29,7 @@ Personal Project to practice and record the examples on Springboot
 	* [Portainer](http://strl099020:9000/#/) - UI for Docker and better management
 	* [Docker Clustering Tools Compared: Kubernetes vs Docker Swarm ](https://technologyconversations.com/2015/11/04/docker-clustering-tools-compared-kubernetes-vs-docker-swarm/)
 	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
-- [travis-ci](https://travis-ci.org/)
+
 - Deployment
 	* [Amazon EC2](http://54.238.176.106:8180)
 - [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
