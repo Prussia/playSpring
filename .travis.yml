@@ -19,8 +19,8 @@ matrix:
   include:
     - jdk: oraclejdk8
       env:
-        - DESC="clean compile"
-        - CMD="mvn clean compile -DskipTests=false"
+        - DESC="clean compile package"
+        - CMD="mvn clean compile -DskipTests=false package"
         - COVERAGE_CMD=""
         - DEPLOY="false"
 

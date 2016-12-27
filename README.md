@@ -31,7 +31,7 @@ Personal Project to practice and record the examples on Springboot
 	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
 
 - Deployment
-	* [Amazon EC2](http://54.238.176.106:8180)
+	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
 - [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
 - [JWT](https://jwt.io/introduction/)
 	* JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
