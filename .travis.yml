@@ -20,7 +20,7 @@ matrix:
     - jdk: oraclejdk8
       env:
         - DESC="clean compile"
-        - CMD="mvn clean compile -DskipTests"
+        - CMD="mvn clean compile -DskipTests=true"
         - COVERAGE_CMD=""
         - DEPLOY="false"
 
