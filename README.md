@@ -1,4 +1,4 @@
-# playSpring
+# playSpring <img src="https://api.travis-ci.org/Prussia/playSpring.svg?branch=master"/>
 Personal Project to practice and record the esamples on Springboot
 
 - *SpringMVC*
