@@ -1,0 +1,87 @@
+buildscript {
+    repositories {
+       
+        maven { url "http://repo.spring.io/release" }
+        maven { url "http://repo.spring.io/milestone" }
+        maven { url "http://repo.spring.io/snapshot" }
+        maven {url "http://repo.gradle.org/gradle/libs-releases-local" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath(
+                'org.springframework.boot:spring-boot-gradle-plugin:1.3.8.RELEASE'
+        )
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven { url "http://repo.spring.io/release" }
+    maven { url "http://repo.spring.io/milestone" }
+    maven { url "http://repo.spring.io/snapshot" }
+    maven {url "http://repo.gradle.org/gradle/libs-releases-local" }
+    mavenCentral()
+}
+
+//testSets {
+//    integrationTest { dirName = 'integration-test' }
+//}
+
+dependencies {
+    compile(
+            'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-actuator',
+            'org.springframework.boot:spring-boot-starter-thymeleaf',
+            'org.springframework.boot:spring-boot-starter-logging',
+            'org.springframework.boot:spring-boot-starter-security',
+            'org.springframework.security:spring-security-taglibs',
+            'org.springframework.boot:spring-boot-starter-devtools',
+            'org.springframework.boot:spring-boot-configuration-processor',
+            'org.springframework.boot:spring-boot-starter-data-jpa',
+            'net.sf.dozer:dozer:5.5.1',
+            //'org.hibernate：hibernate-ehcache',
+            //'org.springframework：spring-context-support',
+            'net.sf.ehcache:ehcache',
+            //'com.microsoft.sqlserver:sqljdbc:4.2'，
+            'org.codehaus.groovy:groovy-templates'
+
+
+            
+    )
+    //providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    //testCompile(
+    //        'com.nitorcreations:junit-runners:1.2',
+    //        'org.springframework.boot:spring-boot-starter-test'
+    //)
+}
+
+//bootRepackage {
+//    mainClass = 'com.prussia.test.play.spring.Application'
+//}
+
+
+//If you want to ensure that integration tests are run every time when you invoke
+//this task, uncomment the following block.
+//project.integrationTest {
+//    outputs.upToDateWhen { false }
+//}
+
+//Ensure that the check task fails the build if there are failing integration tests.
+//check.dependsOn integrationTest
+//Ensure that our unit tests are run before our integration tests
+//integrationTest.mustRunAfter test
+
+//Ensure that the HTML reports of unit and integration tests are written to different directories.
+//tasks.withType(Test) {
+//    reports.html.destination = file("${reporting.baseDir}/${name}")
+//}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14' //we want gradle 2.10 to run this project
+}
+
