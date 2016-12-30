@@ -44,8 +44,14 @@ dependencies {
             'net.sf.dozer:dozer:5.5.1',
             //'org.hibernate：hibernate-ehcache',
             //'org.springframework：spring-context-support',
+            'io.springfox：springfox-swagger-ui:2.4.0',
+            'io.springfox：springfox-swagger2:2.4.0',
+            'org.codehaus.groovy:groovy-templates',
+            'mysql:mysql-connector-java',
+            'org.projectlombok:lombok:1.16.8',
+            'org.easymock:easymock:3.4',
+            '',
             'net.sf.ehcache:ehcache',
-            //'com.microsoft.sqlserver:sqljdbc:4.2'，
             'org.codehaus.groovy:groovy-templates'
 
 
