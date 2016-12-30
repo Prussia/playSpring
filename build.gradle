@@ -31,7 +31,7 @@ repositories {
 //}
 
 dependencies {
-    compile(
+    runtime (
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-actuator',
             'org.springframework.boot:spring-boot-starter-thymeleaf',
@@ -45,17 +45,20 @@ dependencies {
             'org.springframework:spring-context-support',
             'org.hibernate:hibernate-ehcache',
             'net.sf.ehcache:ehcache',
-            'io.springfox:springfox-swagger-ui:2.4.0',
-            'io.springfox:springfox-swagger2:2.4.0',
             'org.codehaus.groovy:groovy-templates',
             'mysql:mysql-connector-java',
             'org.projectlombok:lombok:1.16.8',
-            'org.easymock:easymock:3.4',            
-            'org.codehaus.groovy:groovy-templates'            
+            'org.codehaus.groovy:groovy-templates'     
+    )
+
+    compile(
+            'io.springfox:springfox-swagger-ui:2.4.0',
+            'io.springfox:springfox-swagger2:2.4.0'
     )
     //providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
-    //testCompile(
+    //testRuntime(
     //        'com.nitorcreations:junit-runners:1.2',
+    //        'org.easymock:easymock:3.4',  
     //        'org.springframework.boot:spring-boot-starter-test'
     //)
 }
