@@ -24,6 +24,9 @@ Personal Project to practice and record the examples on Springboot
 
 **TODO**
 
+- [travis-ci](https://travis-ci.org/)
+	- [db setup](https://docs.travis-ci.com/user/database-setup/)
+
 - Dockerfile
 	* [docker-compose](https://docs.docker.com/compose/overview/)
 	* [Docker Clustering Tools Compared: Kubernetes vs Docker Swarm ](https://technologyconversations.com/2015/11/04/docker-clustering-tools-compared-kubernetes-vs-docker-swarm/)
