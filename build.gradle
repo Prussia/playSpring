@@ -38,7 +38,7 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-logging',
             'org.springframework.boot:spring-boot-starter-security',
             'org.springframework.security:spring-security-taglibs',
-            //'org.springframework.boot:spring-boot-starter-devtools',
+            'org.springframework.boot:spring-boot-starter-test',
             'org.springframework.boot:spring-boot-configuration-processor',
             'org.springframework.boot:spring-boot-starter-data-jpa',
             'net.sf.dozer:dozer:5.5.1',
