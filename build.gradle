@@ -4,7 +4,6 @@ buildscript {
         maven { url "http://repo.spring.io/release" }
         maven { url "http://repo.spring.io/milestone" }
         maven { url "http://repo.spring.io/snapshot" }
-        maven {url "http://repo.gradle.org/gradle/libs-releases-local" }
         mavenCentral()
     }
     dependencies {
@@ -24,7 +23,6 @@ repositories {
     maven { url "http://repo.spring.io/release" }
     maven { url "http://repo.spring.io/milestone" }
     maven { url "http://repo.spring.io/snapshot" }
-    maven {url "http://repo.gradle.org/gradle/libs-releases-local" }
     mavenCentral()
 }
 
