@@ -82,6 +82,8 @@ dependencies {
 //    reports.html.destination = file("${reporting.baseDir}/${name}")
 //}
 
+test.onlyIf { Boolean.getBoolean('do.tests') }
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.14' 
 }
