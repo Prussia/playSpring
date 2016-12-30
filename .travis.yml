@@ -16,7 +16,7 @@ matrix:
     - jdk: oraclejdk8
       env:
         - DESC="gradlew run"
-        - CMD="gradlew assemble -x test"
+        - CMD="gradlew assemble"
         - COVERAGE_CMD=""
         - DEPLOY="false"
 
