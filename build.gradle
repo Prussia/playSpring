@@ -31,7 +31,8 @@ repositories {
 //}
 
 dependencies {
-    runtime (
+
+    compile(
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-actuator',
             'org.springframework.boot:spring-boot-starter-thymeleaf',
@@ -48,10 +49,7 @@ dependencies {
             'org.codehaus.groovy:groovy-templates',
             'mysql:mysql-connector-java',
             'org.projectlombok:lombok:1.16.8',
-            'org.codehaus.groovy:groovy-templates'     
-    )
-
-    compile(
+            'org.codehaus.groovy:groovy-templates'，
             'io.springfox:springfox-swagger-ui:2.4.0',
             'io.springfox:springfox-swagger2:2.4.0'
     )
