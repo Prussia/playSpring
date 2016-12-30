@@ -45,8 +45,4 @@ Temporary Items
 /bower_components/
 /node_modules/
 
-playSpring_log
-playSpring_log
-playSpring_log
-playSpring_log
-playSpring_log
+.gradle/*
