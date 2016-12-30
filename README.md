@@ -1,4 +1,4 @@
-# playSpring <img src="https://api.travis-ci.org/Prussia/playSpring.svg?branch=master"/>
+# playSpring [![Build Status](https://travis-ci.org/Prussia/playSpring.svg?branch=master)](https://travis-ci.org/Prussia/playSpring)
 Personal Project to practice and record the examples on Springboot
 
 - *SpringMVC*
