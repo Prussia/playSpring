@@ -28,13 +28,10 @@ Personal Project to practice and record the examples on Springboot
 
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
-
 - Dockerfile
-	* 
 	* [Docker Swarm](https://www.docker.com/products/docker-swarm)
 	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
 	* [Portainer](http://portainer.io/) - UI for Docker and better management
-
 - Deployment
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
 
