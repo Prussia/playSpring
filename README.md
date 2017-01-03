@@ -22,7 +22,7 @@ Personal Project to practice and record the examples on Springboot
 - Validation Constraint
 - [travis-ci](https://travis-ci.org/)
 - [Gradle Implementation](https://github.com/Prussia/playSpring/tree/gradle)
-- [Docker Compose](https://github.com/Prussia/playDockerCompose)
+- [Docker Compose](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
 
 **TODO**
 
