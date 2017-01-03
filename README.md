@@ -21,6 +21,8 @@ Personal Project to practice and record the examples on Springboot
 - Groovy Template Engine
 - Validation Constraint
 - [travis-ci](https://travis-ci.org/)
+- [Gradle Implementation](https://github.com/Prussia/playSpring/tree/gradle)
+- [Docker Compose](https://github.com/Prussia/playDockerCompose)
 
 **TODO**
 
@@ -28,18 +30,19 @@ Personal Project to practice and record the examples on Springboot
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
 
 - Dockerfile
-	* [docker-compose](https://docs.docker.com/compose/overview/)
-	* [Docker Clustering Tools Compared: Kubernetes vs Docker Swarm ](https://technologyconversations.com/2015/11/04/docker-clustering-tools-compared-kubernetes-vs-docker-swarm/)
+	* 
+	* [Docker Swarm](https://www.docker.com/products/docker-swarm)
 	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
+	* [Portainer](http://portainer.io/) - UI for Docker and better management
 
 - Deployment
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
+
 - [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
 - [JWT](https://jwt.io/introduction/)
 	* JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
 	* used for **Authentication** and **Information Exchange**
 	* Single Sign On
-- Gradle Implementation
-- Spring Integration
-- Spring Oauth2    
+- [Spring Oauth2](https://projects.spring.io/spring-security-oauth/)   
 - Websocket         
+- Spring Integration
