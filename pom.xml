@@ -46,6 +46,7 @@
 		<sqljdbc.version>4.2</sqljdbc.version>
 		<swagger.version>2.4.0</swagger.version>
 		<kie.version>6.4.0.Final</kie.version>
+		<skipTests>true</skipTests>
 	</properties>
 
 	<parent>
@@ -145,10 +146,11 @@
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 		</dependency>
+		<!-- <dependency> <groupId>com.microsoft.sqlserver</groupId> <artifactId>sqljdbc</artifactId> 
+			<version>${sqljdbc.version}</version> </dependency> -->
 		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>sqljdbc</artifactId>
-			<version>${sqljdbc.version}</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -225,6 +227,13 @@
 						</manifest>
 					</archive>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+		          <skipTests>${skipTests}</skipTests>
+		        </configuration>
 			</plugin>
 		</plugins>
 	</build>
