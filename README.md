@@ -28,6 +28,8 @@ Personal Project to practice and record the examples on Springboot
 
 - Improve container script
 	- refert to [playDockerCompose](https://github.com/Prussia/playDockerCompose)
+- Monitor
+	- psi-probe
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
 - Dockerfile
