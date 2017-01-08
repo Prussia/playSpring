@@ -26,6 +26,8 @@ Personal Project to practice and record the examples on Springboot
 
 **TODO**
 
+- Improve container script
+	- refert to [playDockerCompose](https://github.com/Prussia/playDockerCompose)
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
 - Dockerfile
