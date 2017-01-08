@@ -35,6 +35,7 @@ Personal Project to practice and record the examples on Springboot
 	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
 	* [Portainer](http://portainer.io/) - UI for Docker and better management
 - Deployment
+	- Tomcat Deploy Plugin @AWS
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
 
 - [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
