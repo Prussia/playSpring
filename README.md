@@ -25,7 +25,8 @@ Personal Project to practice and record the examples on Springboot
 - [Docker Compose](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
 
 **TODO**
-
+- [Chocolatey - Software Management Automation](https://chocolatey.org/install)
+	- [vim](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)
 - Improve container script
 	- refert to [playDockerCompose](https://github.com/Prussia/playDockerCompose)
 - Monitor
