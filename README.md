@@ -40,6 +40,9 @@ Personal Project to practice and record the examples on Springboot
 - Deployment
 	- Tomcat Deploy Plugin @AWS
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
+		- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
+		- [Heroku data](https://data.heroku.com/)
+		- [Connecting to Heroku Postgres Databases from Outside of Heroku](https://devcenter.heroku.com/articles/connecting-to-heroku-postgres-databases-from-outside-of-heroku)
 
 - [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
 - [JWT](https://jwt.io/introduction/)
