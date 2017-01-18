@@ -30,7 +30,7 @@ Personal Project to practice and record the examples on Springboot
 - [Chocolatey - Software Management Automation](https://chocolatey.org/install)
 
 ##**TODO**
-- [Docker Compose](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
+- [docker-compose.yml](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
 - [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
