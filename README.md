@@ -1,6 +1,6 @@
 # playSpring [![Build Status](https://travis-ci.org/Prussia/playSpring.svg?branch=master)](https://travis-ci.org/Prussia/playSpring)
 Personal Project to practice and record the examples on Springboot
-
+###Feature
 - *SpringMVC*
 - *Spring Security*  
 - *Validation Bean* 
@@ -20,35 +20,34 @@ Personal Project to practice and record the examples on Springboot
 - *dozer to transfer from PO to VO* 
 - Groovy Template Engine
 - Validation Constraint
-- [Gradle Implementation](https://github.com/Prussia/playSpring/tree/gradle)
+
+###DevOps
 - [Docker Compose](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
+- [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat
+
+###Continuous Integration
 - [travis-ci](https://travis-ci.org/)
 
-**TODO**
+###Environment
 - [Chocolatey - Software Management Automation](https://chocolatey.org/install)
-	- [vim](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)
-- Improve container script
-	- refert to [playDockerCompose](https://github.com/Prussia/playDockerCompose)
-- Monitor
-	- psi-probe
+
+##**TODO**
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
-- Dockerfile
-	* [Docker Swarm](https://www.docker.com/products/docker-swarm)
-	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
-	* [Portainer](http://portainer.io/) - UI for Docker and better management
 - Deployment
 	- Tomcat Deploy Plugin @AWS
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
 		- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
 		- [Heroku data](https://data.heroku.com/)
 		- [Connecting to Heroku Postgres Databases from Outside of Heroku](https://devcenter.heroku.com/articles/connecting-to-heroku-postgres-databases-from-outside-of-heroku)
-
+- **Single Sign On**
+	- [Authentication and Authorization: OpenID vs OAuth2 vs SAML](https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/)
+	- [JWT](https://jwt.io/introduction/) - JSON Web Token (JWT) - used for **Authentication** and **Information Exchange**
+	- [Spring Oauth2](https://projects.spring.io/spring-security-oauth/)
+- Dockerfile
+	* [Docker Swarm](https://www.docker.com/products/docker-swarm)
+	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
+	* [Portainer](http://portainer.io/) - UI for Docker and better management
 - [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
-- [JWT](https://jwt.io/introduction/)
-	* JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
-	* used for **Authentication** and **Information Exchange**
-	* Single Sign On
-- [Spring Oauth2](https://projects.spring.io/spring-security-oauth/)   
 - Websocket         
 - Spring Integration
