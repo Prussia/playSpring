@@ -20,9 +20,9 @@ Personal Project to practice and record the examples on Springboot
 - *dozer to transfer from PO to VO* 
 - Groovy Template Engine
 - Validation Constraint
-- [travis-ci](https://travis-ci.org/)
 - [Gradle Implementation](https://github.com/Prussia/playSpring/tree/gradle)
 - [Docker Compose](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
+- [travis-ci](https://travis-ci.org/)
 
 **TODO**
 - [Chocolatey - Software Management Automation](https://chocolatey.org/install)
