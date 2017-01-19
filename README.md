@@ -40,9 +40,9 @@ Personal Project to practice and record the examples on Springboot
 		- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
 		- [Heroku data](https://data.heroku.com/)
 		- [Connecting to Heroku Postgres Databases from Outside of Heroku](https://devcenter.heroku.com/articles/connecting-to-heroku-postgres-databases-from-outside-of-heroku)
+- [JWT](https://jwt.io/introduction/) - JSON Web Token (JWT) - used for **Authentication** and **Information Exchange**
 - **Single Sign On**
 	- [Authentication and Authorization: OpenID vs OAuth2 vs SAML](https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/)
-	- [JWT](https://jwt.io/introduction/) - JSON Web Token (JWT) - used for **Authentication** and **Information Exchange**
 	- [Spring Oauth2](https://projects.spring.io/spring-security-oauth/)
 - Dockerfile
 	* [Docker Swarm](https://www.docker.com/products/docker-swarm)
