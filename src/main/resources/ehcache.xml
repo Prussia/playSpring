@@ -3,7 +3,7 @@
 	<diskStore path="/Users/bloosh2005/data/app/cache/encache" />
 	<cache name="com.prussia.test.play.spring.domain.Customer" ></cache> 
 	<defaultCache eternal="false" overflowToDisk="false"
-		maxElementsInMemory="10000" timeToIdleSeconds="3600"
+		maxElementsInMemory="10000" timeToIdleSeconds="3600" maxEntriesLocalHeap="100000"
 		timeToLiveSeconds="360" />
 </ehcache>
 
