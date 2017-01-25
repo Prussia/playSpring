@@ -23,23 +23,21 @@ Personal Project to practice and record the examples on Springboot
 
 ###Continuous Integration
 - [travis-ci](https://travis-ci.org/)
+- [Heroku Deployment by travis](https://docs.travis-ci.com/user/deployment/heroku/)
+	- [playSpring on Heroku](https://playspring.herokuapp.com)
+	- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
 
 ###DevOps
+- [docker-compose.yml](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
 
 ###Dev Environment
 - [Chocolatey - Software Management Automation](https://chocolatey.org/install)
 
 ##**TODO**
-- [docker-compose.yml](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
+- Spring Cloud
 - [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
-- Deployment
-	- Tomcat Deploy Plugin @AWS
-	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
-		- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
-		- [Heroku data](https://data.heroku.com/)
-		- [Connecting to Heroku Postgres Databases from Outside of Heroku](https://devcenter.heroku.com/articles/connecting-to-heroku-postgres-databases-from-outside-of-heroku)
 - [JWT](https://jwt.io/introduction/) - JSON Web Token - used for **Information Exchange** and Authentication
 	- JSON Web Encryption [JWE]
 	- JSON Web Signature [JWS]
