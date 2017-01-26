@@ -23,14 +23,18 @@ Personal Project to practice and record the examples on Springboot
 
 ###Continuous Integration
 - [travis-ci](https://travis-ci.org/)
+- [Heroku Deployment by travis](https://docs.travis-ci.com/user/deployment/heroku/)
+	- [playSpring on Heroku](https://playspring.herokuapp.com)
+	- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
 
 ###DevOps
+- [docker-compose.yml](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
 
 ###Dev Environment
 - [Chocolatey - Software Management Automation](https://chocolatey.org/install)
 
 ##**TODO**
-- [docker-compose.yml](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
+- Spring Cloud
 - [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
