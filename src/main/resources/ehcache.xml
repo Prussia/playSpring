@@ -2,8 +2,8 @@
 	 maxBytesLocalHeap="100M" maxBytesLocalOffHeap="1G" maxBytesLocalDisk="1G" >
 
 	<diskStore path="java.io.tmpdir/tmp_ehcache" />
-	<cache name="com.prussia.test.play.spring.domain.Customer" maxBytesLocalHeap="40%" ></cache> 
-	<defaultCache maxBytesLocalHeap="50M"
+	<cache name="com.prussia.test.play.spring.domain.Customer"  ></cache> 
+	<defaultCache 
 		timeToIdleSeconds="3600" timeToLiveSeconds="360" memoryStoreEvictionPolicy="LRU" />
 </ehcache>
 
