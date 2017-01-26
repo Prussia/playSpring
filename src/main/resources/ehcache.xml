@@ -1,8 +1,9 @@
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd"
+	 maxBytesLocalHeap="100M" maxBytesLocalOffHeap="1G" maxBytesLocalDisk="1G" >
 
-	<diskStore path="/Users/bloosh2005/data/app/cache/encache" />
-	<cache name="com.prussia.test.play.spring.domain.Customer" ></cache> 
-	<defaultCache overflowToDisk="false" maxBytesLocalHeap="100M" maxBytesLocalOffHeap="1G" maxBytesLocalDisk="1G"
+	<diskStore path="java.io.tmpdir/tmp_ehcache" />
+	<cache name="com.prussia.test.play.spring.domain.Customer" maxBytesLocalHeap="40%" ></cache> 
+	<defaultCache overflowToDisk="false" maxBytesLocalHeap="50M"
 		timeToIdleSeconds="3600" timeToLiveSeconds="360" memoryStoreEvictionPolicy="LRU" />
 </ehcache>
 
