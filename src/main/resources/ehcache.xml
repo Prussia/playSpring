@@ -1,7 +1,9 @@
-<ehcache maxBytesLocalHeap="40M">
-
+<ehcache maxBytesLocalHeap="400M">
+	<!-- https://github.com/ehcache/ehcache.org-site/blob/master/ehcache.xml -->
 	<diskStore path="java.io.tmpdir/tmp_ehcache" />
-	<cache name="com.prussia.test.play.spring.domain.Customer"></cache>
+	
+	<cache name="com.prussia.test.play.spring.domain.Customer" maxBytesLocalHeap="100m" maxBytesLocalOffHeap="4g" maxBytesLocalDisk="200g" />
+	
 	<defaultCache maxEntriesLocalHeap="10000" eternal="false"
 		timeToIdleSeconds="120" timeToLiveSeconds="120" maxEntriesLocalDisk="10000000"
 		diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU">
