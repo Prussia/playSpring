@@ -2,20 +2,7 @@
 
 	<diskStore path="/Users/bloosh2005/data/app/cache/encache" />
 	<cache name="com.prussia.test.play.spring.domain.Customer" ></cache> 
-	<defaultCache eternal="false" overflowToDisk="false"
-		maxElementsInMemory="10000" timeToIdleSeconds="3600"
-		timeToLiveSeconds="360" />
+	<defaultCache overflowToDisk="false" maxEntriesLocalHeap="20000" maxElementsInMemory="20000"
+		timeToIdleSeconds="3600" timeToLiveSeconds="360" memoryStoreEvictionPolicy="LRU" />
 </ehcache>
-
-<!-- 
-<?xml version="1.0" encoding="UTF-8"?>
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
-  updateCheck="false">
-    <diskStore path="java.io.tmpdir/Tmp_EhCache" />
-    <cache name="demo" maxEntriesLocalHeap="2000"></cache>
-    <defaultCache overflowToDisk="false" maxEntriesLocalHeap="20000"
-		timeToIdleSeconds="5" timeToLiveSeconds="900" memoryStoreEvictionPolicy="LRU" />
-    
-
-</ehcache> -->
 
