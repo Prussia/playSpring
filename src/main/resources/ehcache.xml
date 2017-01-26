@@ -1,4 +1,4 @@
-<ehcache>
+<ehcache maxBytesLocalHeap="40M">
 
 	<diskStore path="java.io.tmpdir/tmp_ehcache" />
 	<cache name="com.prussia.test.play.spring.domain.Customer"></cache>
