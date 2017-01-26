@@ -3,7 +3,7 @@
 
 	<diskStore path="java.io.tmpdir/tmp_ehcache" />
 	<cache name="com.prussia.test.play.spring.domain.Customer" maxBytesLocalHeap="40%" ></cache> 
-	<defaultCache overflowToDisk="false" maxBytesLocalHeap="50M"
+	<defaultCache maxBytesLocalHeap="50M"
 		timeToIdleSeconds="3600" timeToLiveSeconds="360" memoryStoreEvictionPolicy="LRU" />
 </ehcache>
 
