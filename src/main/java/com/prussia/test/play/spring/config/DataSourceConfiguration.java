@@ -1,29 +1,43 @@
 package com.prussia.test.play.spring.config;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 import javax.sql.DataSource;
 
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Description;
 import org.springframework.context.annotation.Profile;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
-@Profile("dev")
+@Profile("prod")
 @Slf4j
 public class DataSourceConfiguration {
 
-	DataSource dataSource;
-	
 	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource")
-	@Description("msSql data source")
-	public DataSource getDataSource() {
-		DataSource ds =  DataSourceBuilder.create().build();
-		return ds;
+	public DataSource dataSource() throws URISyntaxException {
+		URI dbUri = new URI(System.getenv("DATABASE_URL"));
+
+		String username = dbUri.getUserInfo().split(":")[0];
+		String password = dbUri.getUserInfo().split(":")[1];
+		String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
+		DataSourceBuilder factory = DataSourceBuilder.create()
+				.driverClassName("org.postgresql.Driver")
+				.url(dbUrl)
+				.username(username)
+				.password(password);
+		
+		log.warn("datasource info is {} ", dbUrl );
+		
+		log.warn("datasource username is {}", username);
+		log.warn("datasource password is {}", password);
+		
+		return factory.build();
+
 	}
-	
+
 }
