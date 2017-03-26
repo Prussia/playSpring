@@ -4,7 +4,7 @@
 
 	<groupId>com.prussia.test</groupId>
 	<artifactId>playspring</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.5.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<!-- for war packaging -->
 	<!-- <packaging>war</packaging> -->
