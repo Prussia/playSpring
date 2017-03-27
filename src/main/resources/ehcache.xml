@@ -78,7 +78,7 @@
         timeToIdleSeconds="0"
         timeToLiveSeconds="0"
         overflowToDisk="false"
-        /> -->
+        /> 
 
     <!-- Place configuration for your caches following -->
 	<cache name="com.prussia.test.play.spring.domain.Customer"
