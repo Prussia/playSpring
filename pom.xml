@@ -40,7 +40,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<dozer.version>5.5.1</dozer.version>
-		<lombok.version>1.16.8</lombok.version>
 		<poi.version>3.14</poi.version>
 		<easymock.version>3.4</easymock.version>
 		<sqljdbc.version>4.2</sqljdbc.version>
