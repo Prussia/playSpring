@@ -2,7 +2,10 @@ package com.prussia.test.play.spring.service;
 
 import org.springframework.stereotype.Service;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class AssesorBean implements RiskAssessorService {
 
 	public AssesorBean(){
@@ -11,12 +14,12 @@ public class AssesorBean implements RiskAssessorService {
 
 	@Override
 	public void createAcctount(String accountNo, String username) {
-		// TODO Auto-generated method stub
 		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error("account = ", accountNo);
+			log.error("username = ", username);
+			
+		} catch (Exception e) {
+			log.error("issue happened", e);
 		}
 	}
 }
