@@ -11,9 +11,12 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.prussia.test.play.spring.Application;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
 @WebAppConfiguration
+@Slf4j
 public class SpringbootTest {
 	
 	@Autowired
@@ -21,6 +24,9 @@ public class SpringbootTest {
 
 	@Test
 	public void testTemplate(){
-		
+		org.apache.tomcat.jdbc.pool.DataSource bds = (org.apache.tomcat.jdbc.pool.DataSource)datasource;
+		log.warn("Username=", bds.getUsername());
+		log.warn("URL=", bds.getUrl());
+		log.warn("DriverClassName=", bds.getDriverClassName());
 	}
 }
