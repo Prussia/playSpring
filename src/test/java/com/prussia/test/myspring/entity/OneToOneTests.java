@@ -1,5 +1,7 @@
 package com.prussia.test.myspring.entity;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,9 +15,12 @@ import com.prussia.test.play.spring.Application;
 import com.prussia.test.play.spring.domain.po.Customer;
 import com.prussia.test.play.spring.repository.CustomerRepostory;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
 @WebAppConfiguration
+@Slf4j
 public class OneToOneTests {
 	@Autowired
 	private CustomerRepostory customerRepo;
@@ -30,14 +35,23 @@ public class OneToOneTests {
 
 	@Test
 	public void testInsertCustomer() {
-		customerRepo.save(expectCustomer);
+		customerRepo.saveAndFlush(expectCustomer);
 	}
 
 	@Test
-	public void testFindCustomer() {
-		Customer customer = customerRepo.findOne(1L);
+	public void testFindOne() {
+		Customer customer = customerRepo.getOne(1L);
 
-		Assert.assertEquals(expectCustomer, customer);
+		Assert.assertTrue(expectCustomer.equals(customer));
+
+	}
+	
+	@Test
+	public void testFindCustomer() {
+		List<Customer> customers = customerRepo.findByFirstName("Jimmy");
+		//System.out.println("Jimmy's ID: " + customers.get(1).getId());
+//		log.warn("Jimmy's ID is {}", customers.get(1).getId());
+		Assert.assertEquals(1, customers.size());
 
 	}
 }
