@@ -42,15 +42,13 @@ public class OneToOneTests {
 	public void testFindOne() {
 		Customer customer = customerRepo.getOne(1L);
 
-		Assert.assertTrue(expectCustomer.equals(customer));
-
+		Assert.assertTrue(expectCustomer.getFirstName().equals(customer.getFirstName()));
+		Assert.assertTrue(expectCustomer.getLastName().equals(customer.getLastName()));
 	}
 	
 	@Test
 	public void testFindCustomer() {
 		List<Customer> customers = customerRepo.findByFirstName("Jimmy");
-		//System.out.println("Jimmy's ID: " + customers.get(1).getId());
-//		log.warn("Jimmy's ID is {}", customers.get(1).getId());
 		Assert.assertEquals(1, customers.size());
 
 	}
