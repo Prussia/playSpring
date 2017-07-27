@@ -3,25 +3,33 @@ package com.prussia.test.play.spring.domain.po;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
-@Entity
-public class Customer implements Serializable{
+@Entity(name = "Customer")
+@Table(name = "customer")
+public class Customer implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	private String firstName;
-	
+
 	private String lastName;
 
 	private Date createdDate;
-	
+
 	private Date updatedDate;
+
+	@OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+	private CustomerDetail detail;
 
 	public Customer() {
 		super();
@@ -65,13 +73,21 @@ public class Customer implements Serializable{
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
-	
-	public Date getUpdatedDate(){
+
+	public Date getUpdatedDate() {
 		return this.createdDate;
 	}
-	
-	public void setUpdatedDate(Date updatedDate){
+
+	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
+	}
+
+	public CustomerDetail getDetail() {
+		return detail;
+	}
+
+	public void setDetail(CustomerDetail detail) {
+		this.detail = detail;
 	}
 
 	@Override
