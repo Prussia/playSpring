@@ -35,7 +35,7 @@ public class OneToOneTests {
 
 	@Test
 	public void testFindCustomer() {
-		Customer customer = customerRepo.findOne(expectCustomer.getId());
+		Customer customer = customerRepo.findOne(1L);
 
 		Assert.assertEquals(expectCustomer, customer);
 
