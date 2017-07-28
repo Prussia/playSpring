@@ -2,6 +2,9 @@ package com.prussia.test.myspring.entity;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.apache.commons.beanutils.BeanUtilsBean;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,35 +24,45 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest(classes = Application.class)
 @WebAppConfiguration
 @Slf4j
+//@Transactional
 public class OneToOneTests {
 	@Autowired
 	private CustomerRepostory customerRepo;
 	private Customer expectCustomer;
+	private BeanUtilsBean beanUtil;
 
 	@Before
 	public void init() {
+		beanUtil = new BeanUtilsBean();
 		expectCustomer = new Customer();
+		expectCustomer.setId(1L);
 		expectCustomer.setFirstName("Jimmy");
 		expectCustomer.setLastName("Jin");
 	}
 
 	@Test
-	public void testInsertCustomer() {
-		customerRepo.saveAndFlush(expectCustomer);
+	public void testInsertCustomer() throws Exception {
+		Customer customer = customerRepo.saveAndFlush(expectCustomer);
+		beanUtil.copyProperties(expectCustomer, customer);
+		Assert.assertNotNull(expectCustomer);
+		Assert.assertNotNull(expectCustomer.getId());
+		Assert.assertNotNull(expectCustomer.getFirstName().equals("Jimmy"));
+		Assert.assertNotNull(expectCustomer.getLastName().equals("Jin"));
 	}
 
 	@Test
 	public void testFindOne() {
-		Customer customer = customerRepo.getOne(1L);
-
+		Customer customer = customerRepo.getOne(expectCustomer.getId());
 		Assert.assertTrue(expectCustomer.getFirstName().equals(customer.getFirstName()));
 		Assert.assertTrue(expectCustomer.getLastName().equals(customer.getLastName()));
 	}
 	
 	@Test
 	public void testFindCustomer() {
-		List<Customer> customers = customerRepo.findByFirstName("Jimmy");
+		List<Customer> customers = customerRepo.findAll();
 		Assert.assertEquals(1, customers.size());
-
+		Assert.assertEquals(expectCustomer.getFirstName(), customers.get(0).getFirstName());
+		Assert.assertEquals(expectCustomer.getLastName(), customers.get(0).getLastName());
+		Assert.assertEquals(expectCustomer.getId(), customers.get(0).getId());
 	}
 }

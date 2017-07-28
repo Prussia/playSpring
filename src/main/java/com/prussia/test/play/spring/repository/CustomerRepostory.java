@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.prussia.test.play.spring.domain.po.Customer;
 
-@Repository
+
 public interface CustomerRepostory extends JpaRepository<Customer, Long> {
 	
 	public List<Customer> findByFirstName(String firstName);
