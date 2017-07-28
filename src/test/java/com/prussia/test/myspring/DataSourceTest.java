@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest(classes = Application.class)
 @WebAppConfiguration
 @Slf4j
-public class SpringbootTest {
+public class DataSourceTest {
 	
 	@Autowired
 	DataSource datasource;
