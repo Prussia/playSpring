@@ -1,8 +1,7 @@
 package com.prussia.test.myspring.entity;
 
+import java.util.Date;
 import java.util.List;
-
-import javax.transaction.Transactional;
 
 import org.apache.commons.beanutils.BeanUtilsBean;
 import org.junit.Assert;
@@ -38,6 +37,8 @@ public class OneToOneTests {
 		expectCustomer.setId(1L);
 		expectCustomer.setFirstName("Jimmy");
 		expectCustomer.setLastName("Jin");
+		expectCustomer.setCreatedDate(new Date());
+		expectCustomer.setUpdatedDate(new Date());
 	}
 
 	@Test
@@ -53,6 +54,8 @@ public class OneToOneTests {
 	@Test
 	public void testFindOne() {
 		Customer customer = customerRepo.getOne(expectCustomer.getId());
+		
+		
 		Assert.assertTrue(expectCustomer.getFirstName().equals(customer.getFirstName()));
 		Assert.assertTrue(expectCustomer.getLastName().equals(customer.getLastName()));
 	}
@@ -64,5 +67,7 @@ public class OneToOneTests {
 		Assert.assertEquals(expectCustomer.getFirstName(), customers.get(0).getFirstName());
 		Assert.assertEquals(expectCustomer.getLastName(), customers.get(0).getLastName());
 		Assert.assertEquals(expectCustomer.getId(), customers.get(0).getId());
+		Assert.assertNotNull(customers.get(0).getCreatedDate());
+		Assert.assertNotNull(customers.get(0).getUpdatedDate());
 	}
 }
