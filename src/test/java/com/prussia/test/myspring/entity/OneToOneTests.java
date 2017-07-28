@@ -3,7 +3,6 @@ package com.prussia.test.myspring.entity;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.beanutils.BeanUtilsBean;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,42 +27,44 @@ public class OneToOneTests {
 	@Autowired
 	private CustomerRepostory customerRepo;
 	private Customer expectCustomer;
-	private BeanUtilsBean beanUtil;
 
 	@Before
 	public void init() {
-		beanUtil = new BeanUtilsBean();
 		expectCustomer = new Customer();
 		expectCustomer.setId(1L);
 		expectCustomer.setFirstName("Jimmy");
 		expectCustomer.setLastName("Jin");
 		expectCustomer.setCreatedDate(new Date());
 		expectCustomer.setUpdatedDate(new Date());
-	}
-
-	@Test
-	public void testInsertCustomer() throws Exception {
 		Customer customer = customerRepo.saveAndFlush(expectCustomer);
-		beanUtil.copyProperties(expectCustomer, customer);
-		Assert.assertNotNull(expectCustomer);
-		Assert.assertNotNull(expectCustomer.getId());
-		Assert.assertNotNull(expectCustomer.getFirstName().equals("Jimmy"));
-		Assert.assertNotNull(expectCustomer.getLastName().equals("Jin"));
+		
+//		Customer expectCustomer1 = new Customer();
+//		expectCustomer1.setId(2L);
+//		expectCustomer1.setFirstName("Prussia");
+//		expectCustomer1.setLastName("Jin");
+//		expectCustomer1.setCreatedDate(new Date());
+//		expectCustomer1.setUpdatedDate(new Date());
+//		
+//		customerRepo.saveAndFlush(expectCustomer1);
 	}
 
 	@Test
 	public void testFindOne() {
-		Customer customer = customerRepo.getOne(expectCustomer.getId());
 		
-		
-		Assert.assertTrue(expectCustomer.getFirstName().equals(customer.getFirstName()));
-		Assert.assertTrue(expectCustomer.getLastName().equals(customer.getLastName()));
+		boolean iexist = customerRepo.exists(expectCustomer.getId());
+		Assert.assertTrue(iexist);
+	    Customer customer2 = customerRepo.findOne(expectCustomer.getId());
+		Assert.assertNotNull(customer2.getId());
+		Assert.assertEquals(Long.valueOf(1), customer2.getId());
+		Assert.assertTrue("Jimmy".equals(customer2.getFirstName()));
+		Assert.assertTrue("Jin".equals(customer2.getLastName()));
 	}
 	
 	@Test
 	public void testFindCustomer() {
 		List<Customer> customers = customerRepo.findAll();
-		Assert.assertEquals(1, customers.size());
+		long count = customers.size();
+		Assert.assertEquals(1L, count);
 		Assert.assertEquals(expectCustomer.getFirstName(), customers.get(0).getFirstName());
 		Assert.assertEquals(expectCustomer.getLastName(), customers.get(0).getLastName());
 		Assert.assertEquals(expectCustomer.getId(), customers.get(0).getId());
