@@ -4,7 +4,7 @@
 
 	<groupId>com.prussia.test</groupId>
 	<artifactId>playspring</artifactId>
-	<version>1.5.3-SNAPSHOT</version>
+	<version>1.5.6-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<!-- for war packaging -->
 	<!-- <packaging>war</packaging> -->
@@ -51,7 +51,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.3.RELEASE</version>
+		<version>1.5.6.RELEASE</version>
 	</parent>
 	<dependencies>
 		<dependency>
