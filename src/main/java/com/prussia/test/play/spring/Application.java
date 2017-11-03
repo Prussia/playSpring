@@ -17,7 +17,7 @@ import com.prussia.test.play.spring.dao.MyDao;
 import com.prussia.test.play.spring.domain.po.Quote;
 
 @SpringBootApplication
-public class Application extends SpringBootServletInitializer implements CommandLineRunner  {
+public class Application extends SpringBootServletInitializer /*implements CommandLineRunner*/  {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
