@@ -9,6 +9,8 @@ public class Processor implements ItemProcessor<String, String> {
 
 	@Override
 	public String process(String data) throws Exception {
+		Thread.sleep(1000*5);
+		log.warn("uppercase messages......");
 		return data.toUpperCase();
 	}
 

@@ -14,7 +14,8 @@ public class Reader implements ItemReader<String> {
 
 	@Override
 	public String read() throws Exception{
-
+		Thread.sleep(1000*5);
+		log.warn("reading messages......");
 		if (count < messages.length) {
 			return messages[count++];
 		} else {

@@ -15,12 +15,10 @@ public class JobCompletionListener extends JobExecutionListenerSupport {
 			log.warn("BATCH JOB jobExecution.getStatus() = {}", jobExecution.getStatus());
 		}
 	}
-	
+
 	@Override
 	public void beforeJob(JobExecution jobExecution) {
-		if (jobExecution.getStatus() == BatchStatus.STARTING) {
-			log.warn("BATCH JOB jobExecution.getStatus() = {}", jobExecution.getStatus());
-		}
+		log.warn("BATCH JOB jobExecution.getStatus() = {}", jobExecution.getStatus());
 	}
 
 }

@@ -11,7 +11,10 @@ public class Writer implements ItemWriter<String> {
 
 	@Override
 	public void write(List<? extends String> messages) throws Exception {
+		Thread.sleep(1000*15);
+		log.warn("writing messages......");
 		for (String msg : messages) {
+			Thread.sleep(1000*15);
 			System.out.println("Writing the data " + msg);
 		}
 	}
