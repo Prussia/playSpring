@@ -7,8 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Reader implements ItemReader<String> {
 
-	private String[] messages = { "javainuse.com", "Welcome to Spring Batch Example",
-			"We use H2 Database for this example" };
+	private String[] messages = { "prussia.com", "Welcome to Spring Batch Example",
+			"We don't use Database for this example" };
 
 	private int count = 0;
 

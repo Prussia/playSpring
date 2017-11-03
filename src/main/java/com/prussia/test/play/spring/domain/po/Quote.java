@@ -28,7 +28,7 @@ public class Quote {
 
 	@Override
 	public String toString() {
-		return "Quote [type=" + type + ", value=" + value.toString() + "]";
+		return "Quote [type=" + type + ", value=" + value + "]";
 	}
 	
 	

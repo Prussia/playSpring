@@ -7,8 +7,10 @@ import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class JobLauncherController {
 
 	@Autowired
@@ -24,7 +26,7 @@ public class JobLauncherController {
 	// jobLauncher.run(job, new JobParameters());
 	// }
 
-	@RequestMapping("/invokejob")
+	@RequestMapping(value = "/invokejob", method = RequestMethod.GET)
 	public String handle() throws Exception {
 
 		JobParameters jobParameters = new JobParametersBuilder().addLong("time", System.currentTimeMillis())

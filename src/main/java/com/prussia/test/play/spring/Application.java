@@ -68,11 +68,11 @@ public class Application extends SpringBootServletInitializer implements Command
 		int i = 0;
 		for (String bean : context.getBeanDefinitionNames()) {
 			i++;
-			log.info(i + "." + bean);
+			log.debug(i + "." + bean);
 		}
 
 		int count = context.getBeanDefinitionCount();
-		log.info("Total bean count: " + count);
+		log.debug("Total bean count: " + count);
 	}
 
 }
