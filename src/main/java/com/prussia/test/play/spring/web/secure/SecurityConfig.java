@@ -29,11 +29,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //		.anyRequest().authenticated()
 //		.and().formLogin()
 //		.loginPage("/login.jsp").permitAll()
-		.and()
-		.sessionManagement().sessionCreationPolicy(this.security.getSessions())
-		.sessionFixation()
-		.none().maximumSessions(1)
-		.and().invalidSessionUrl("/api/login/invalid")
+		// comment it for testing
+//		.and()
+//		.sessionManagement().sessionCreationPolicy(this.security.getSessions())
+//		.sessionFixation()
+//		.none().maximumSessions(1)
+//		.and().invalidSessionUrl("/api/login/invalid")
+		
 //		.changeSessionId()
 //		.migrateSession()
 		;
