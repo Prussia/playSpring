@@ -46,6 +46,9 @@ public class BatchConfiguration {
 		return new JobCompletionListener();
 	}
 	
+	/*
+	 * disable using the database to save metadata for its recover/retry functionality
+	 */
 	@Bean
 	public PlatformTransactionManager getTransactionManager() {
 	    return new ResourcelessTransactionManager();
