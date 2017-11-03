@@ -11,6 +11,7 @@ public class Writer implements ItemWriter<String> {
 
 	@Override
 	public void write(List<? extends String> messages) throws Exception {
+		log.debug("start sleeping 5s");
 		Thread.sleep(1000*15);
 		log.warn("writing messages......");
 		for (String msg : messages) {

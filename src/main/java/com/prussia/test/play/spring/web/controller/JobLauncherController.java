@@ -7,13 +7,11 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;
-import org.springframework.batch.core.launch.JobExecutionNotRunningException;
 import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.batch.core.launch.NoSuchJobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,7 +34,8 @@ public class JobLauncherController {
 	Map<String, JobExecution> jobExecutionMap = new ConcurrentHashMap<>();
 
 	@RequestMapping(value = "/invokejob", method = RequestMethod.GET)
-	public String startJob() throws Exception {
+	
+	public void startJob() throws Exception {
 
 		JobParameters jobParameters = new JobParametersBuilder().addLong("time", System.currentTimeMillis())
 				.toJobParameters();
@@ -44,7 +43,7 @@ public class JobLauncherController {
 
 		jobExecutionMap.put("exec-id", execution);
 
-		return "Batch job has been invoked";
+//		return "Batch job has been invoked";
 	}
 
 	@RequestMapping(value = "/stopjob", method = RequestMethod.GET)
