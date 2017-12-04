@@ -1,6 +1,5 @@
 package com.prussia.test.play.spring.util;
 
-
 import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.commons.compress.archivers.ArchiveOutputStream;
 import org.apache.commons.compress.archivers.ArchiveStreamFactory;
@@ -8,6 +7,7 @@ import org.apache.commons.compress.archivers.zip.ZipArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipFile;
 import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.Test;
 
 import java.io.*;
@@ -17,78 +17,82 @@ import java.util.Enumeration;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-
 public class ZipUtil {
 
-	@Test
-    public void add_all_files_from_a_directory_to_a_zip_archive() throws Exception {
-        File source = new File("build/resources/test");
-        File destination = new File("build/resources.zip");
-        destination.delete();
+	/**
+	 * Add all files from the source directory to the destination zip file
+	 *
+	 * @param source
+	 *            the directory with files to add
+	 * @param destination
+	 *            the zip file that should contain the files
+	 * @throws IOException
+	 *             if the io fails
+	 * @throws ArchiveException
+	 *             if creating or adding to the archive fails
+	 */
+	private void addFilesToZip(File source, File destination) throws IOException, ArchiveException {
+		OutputStream archiveStream = new FileOutputStream(destination);
+		ArchiveOutputStream archive = new ArchiveStreamFactory().createArchiveOutputStream(ArchiveStreamFactory.ZIP,
+				archiveStream);
 
-        addFilesToZip(source, destination);
+		if (source.isDirectory()) {
+			Collection<File> fileList = FileUtils.listFiles(source, null, true);
 
-        assertTrue("Expected to find the zip file ", destination.exists());
-        assertZipContent(destination);
-    }
+			for (File file : fileList) {
+				String entryName = getEntryName(source, file);
+//				zipFile(archive, file, entryName);
+				zipSingleFile(file, archive, entryName);
+			}
+		} else if (source.isFile()) {
+			String entryName = FilenameUtils.getName(source.getPath());
+			zipSingleFile(source, archive, entryName);
+		}
 
-    /**
-     * Add all files from the source directory to the destination zip file
-     *
-     * @param source      the directory with files to add
-     * @param destination the zip file that should contain the files
-     * @throws IOException      if the io fails
-     * @throws ArchiveException if creating or adding to the archive fails
-     */
-    private void addFilesToZip(File source, File destination) throws IOException, ArchiveException {
-        OutputStream archiveStream = new FileOutputStream(destination);
-        ArchiveOutputStream archive = new ArchiveStreamFactory().createArchiveOutputStream(ArchiveStreamFactory.ZIP, archiveStream);
+		archive.finish();
+		archiveStream.close();
+	}
 
-        Collection<File> fileList = FileUtils.listFiles(source, null, true);
+	private void zipSingleFile(File source, ArchiveOutputStream archive, String entryName)
+			throws IOException, FileNotFoundException {
+		ZipArchiveEntry entry = new ZipArchiveEntry(entryName);
+		archive.putArchiveEntry(entry);
 
-        for (File file : fileList) {
-            String entryName = getEntryName(source, file);
-            ZipArchiveEntry entry = new ZipArchiveEntry(entryName);
-            archive.putArchiveEntry(entry);
+		BufferedInputStream input = new BufferedInputStream(new FileInputStream(source.getPath()));
 
-            BufferedInputStream input = new BufferedInputStream(new FileInputStream(file));
+		IOUtils.copy(input, archive);
+		input.close();
+		archive.closeArchiveEntry();
+	}
 
-            IOUtils.copy(input, archive);
-            input.close();
-            archive.closeArchiveEntry();
-        }
+	private void zipFile(ArchiveOutputStream archive, File file, String entryName)
+			throws IOException, FileNotFoundException {
+		ZipArchiveEntry entry = new ZipArchiveEntry(entryName);
+		archive.putArchiveEntry(entry);
 
-        archive.finish();
-        archiveStream.close();
-    }
+		BufferedInputStream input = new BufferedInputStream(new FileInputStream(file));
 
-    /**
-     * Remove the leading part of each entry that contains the source directory name
-     *
-     * @param source the directory where the file entry is found
-     * @param file   the file that is about to be added
-     * @return the name of an archive entry
-     * @throws IOException if the io fails
-     */
-    private String getEntryName(File source, File file) throws IOException {
-        int index = source.getAbsolutePath().length() + 1;
-        String path = file.getCanonicalPath();
+		IOUtils.copy(input, archive);
+		input.close();
+		archive.closeArchiveEntry();
+	}
 
-        return path.substring(index);
-    }
+	/**
+	 * Remove the leading part of each entry that contains the source directory name
+	 *
+	 * @param source
+	 *            the directory where the file entry is found
+	 * @param file
+	 *            the file that is about to be added
+	 * @return the name of an archive entry
+	 * @throws IOException
+	 *             if the io fails
+	 */
+	private String getEntryName(File source, File file) throws IOException {
+		int index = source.getAbsolutePath().length() + 1;
+		String path = file.getCanonicalPath();
 
-    private void assertZipContent(File destination) throws IOException {
-        ZipFile zipFile = new ZipFile(destination);
+		return path.substring(index);
+	}
 
-        ZipArchiveEntry readme = zipFile.getEntry("readme.txt");
-        assertNotNull(readme);
-
-        Enumeration<ZipArchiveEntry> entries = zipFile.getEntries();
-        int numberOfEntries = 0;
-        while (entries.hasMoreElements()) {
-            numberOfEntries++;
-            entries.nextElement();
-        }
-        assertThat(numberOfEntries, is(1));
-    }
 }
