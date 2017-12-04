@@ -41,7 +41,6 @@ public class ZipUtil {
 
 			for (File file : fileList) {
 				String entryName = getEntryName(source, file);
-//				zipFile(archive, file, entryName);
 				zipSingleFile(file, archive, entryName);
 			}
 		} else if (source.isFile()) {
