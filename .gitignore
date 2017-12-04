@@ -48,3 +48,14 @@ Temporary Items
 .gradle/*
 *.log
 .factorypath
+/.apt_generated/
+
+.factorypath
+
+.classpath
+
+.idea/*
+
+*.iml
+
+.java-version
