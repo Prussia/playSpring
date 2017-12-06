@@ -13,6 +13,8 @@ import org.springframework.batch.support.transaction.ResourcelessTransactionMana
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.prussia.test.play.spring.batch.JobCompletionListener;
@@ -46,6 +48,13 @@ public class BatchConfiguration {
 		return new JobCompletionListener();
 	}
 	
+	@Bean
+	public TaskExecutor taskExecutor(){
+	    SimpleAsyncTaskExecutor asyncTaskExecutor=new SimpleAsyncTaskExecutor("spring_batch");
+	    asyncTaskExecutor.setConcurrencyLimit(5);
+	    return asyncTaskExecutor;
+	}
+	
 	/*
 	 * disable using the database to save metadata for its recover/retry functionality
 	 */
@@ -58,5 +67,7 @@ public class BatchConfiguration {
 	public JobRepository getJobRepo() throws Exception {
 	    return new MapJobRepositoryFactoryBean(getTransactionManager()).getObject();
 	}
+	
+	
 	
 }
