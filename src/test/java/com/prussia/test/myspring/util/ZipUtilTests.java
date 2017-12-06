@@ -1,6 +1,20 @@
 package com.prussia.test.myspring.util;
 
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Collection;
+import java.util.Enumeration;
+
 import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.commons.compress.archivers.ArchiveOutputStream;
 import org.apache.commons.compress.archivers.ArchiveStreamFactory;
@@ -10,13 +24,6 @@ import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.Test;
-
-import java.io.*;
-import java.util.Collection;
-import java.util.Enumeration;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
 
 
 public class ZipUtilTests {
