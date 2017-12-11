@@ -19,8 +19,8 @@ public class KafkaServiceBean implements KafkaService {
 	@Autowired
 	private KafkaTemplate<String, Map<String, Object>> kafkaTemplate;
 
-	public void sendToKafka(final String key, final Map<String, Object> data) {
-		final ProducerRecord<String, Map<String, Object>> record = createRecord("producer_count_topic", key, data);
+	public void sendToKafka(final String topic, final String key, final Map<String, Object> data) {
+		final ProducerRecord<String, Map<String, Object>> record = createRecord(topic, key, data);
 
 		ListenableFuture<SendResult<String, Map<String, Object>>> future = kafkaTemplate.send(record);
 		future.addCallback(new ListenableFutureCallback<SendResult<String, Map<String, Object>>>() {

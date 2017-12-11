@@ -4,5 +4,5 @@ import java.util.Map;
 
 public interface KafkaService {
 
-	public void sendToKafka(final String key, final Map<String, Object> data);
+	public void sendToKafka(final String topic, final String key, final Map<String, Object> data);
 }

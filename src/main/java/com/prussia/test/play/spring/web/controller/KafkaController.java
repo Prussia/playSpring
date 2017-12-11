@@ -28,7 +28,17 @@ public class KafkaController {
 		Map<String, Object> map = new HashMap<>();
 		map.put("lineno", lineno);
 		map.put("key", key);
-		kafkaService.sendToKafka(key, map);
+		kafkaService.sendToKafka("producer_count_topic", key, map);
+		return "";
+	}
+	
+	@RequestMapping(value = "/consumer/count/topic", method = RequestMethod.POST)
+	public @ResponseBody String sendConsumerCount(@RequestParam("lineno") int lineno, 
+			@RequestParam("key") String key) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("lineno", lineno);
+		map.put("key", key);
+		kafkaService.sendToKafka("persisted_rdd_topic", key, map);
 		return "";
 	}
 	
