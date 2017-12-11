@@ -28,7 +28,8 @@ public class KafkaServiceBean implements KafkaService {
 			@Override
 			public void onSuccess(SendResult<String, Map<String, Object>> result) {
 				log.info("result = {}", result.getRecordMetadata());
-
+				log.info("topic = {}" ,  topic);
+				log.info("msg = {}", data);
 			}
 
 			@Override
