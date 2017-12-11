@@ -29,11 +29,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //		.anyRequest().authenticated()
 //		.and().formLogin()
 //		.loginPage("/login.jsp").permitAll()
-		.and()
-		.sessionManagement().sessionCreationPolicy(this.security.getSessions())
-		.sessionFixation()
-		.none().maximumSessions(1)
-		.and().invalidSessionUrl("/api/login/invalid")
+		.and().csrf().disable()
+//		.sessionManagement().sessionCreationPolicy(this.security.getSessions())
+//		.sessionFixation()
+//		.none().maximumSessions(1)
+//		.and().invalidSessionUrl("/api/login/invalid")
+		
+		
 //		.changeSessionId()
 //		.migrateSession()
 		;
@@ -43,7 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			http.addFilterBefore(new SessionFilter(), ChannelProcessingFilter.class);
 		}
 
-		http.addFilterAfter(new SessionFilter(), ChannelProcessingFilter.class);
+		//http.addFilterAfter(new SessionFilter(), ChannelProcessingFilter.class);
 	}
 
 	private boolean checkProfile4Swagger(boolean isSwagger) {

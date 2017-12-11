@@ -39,15 +39,15 @@ public class SessionFilter extends GenericFilterBean {
 
 		 
 
-		if (user == null) {
-			log.info("---------- Rejected url: {}", url);
-			Quote result = new Quote();
-			result.setType("TIMEOUT");
-			Value value = new Value();
-			value.setQuote("The authorization is timeout");
-			response.getWriter().print(result);
-			return;
-		}
+//		if (user == null) {
+//			log.info("---------- Rejected url: {}", url);
+//			Quote result = new Quote();
+//			result.setType("TIMEOUT");
+//			Value value = new Value();
+//			value.setQuote("The authorization is timeout");
+//			response.getWriter().print(result);
+//			return;
+//		}
 
 		chain.doFilter(req, res);
 	}

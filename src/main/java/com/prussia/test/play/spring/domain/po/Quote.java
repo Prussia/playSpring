@@ -1,5 +1,7 @@
 package com.prussia.test.play.spring.domain.po;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -28,7 +30,7 @@ public class Quote {
 
 	@Override
 	public String toString() {
-		return "Quote [type=" + type + ", value=" + value.toString() + "]";
+		return "Quote [type=" + type + ", value=" + StringUtils.defaultString(""+value, "") + "]";
 	}
 	
 	
