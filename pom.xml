@@ -207,7 +207,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.prussia.test.play.spring.Application</mainClass>
+					<mainClass>com.prussia.play.spring.Application</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -220,7 +220,7 @@
 						</manifestFile>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.prussia.test.play.spring.Application</mainClass>
+							<mainClass>com.prussia.play.spring.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

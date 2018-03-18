@@ -12,9 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.prussia.test.play.spring.Application;
-import com.prussia.test.play.spring.domain.po.Customer;
-import com.prussia.test.play.spring.repository.CustomerRepostory;
+import com.prussia.play.spring.Application;
+import com.prussia.play.spring.domain.po.Customer;
+import com.prussia.play.spring.repository.CustomerRepostory;
 
 import lombok.extern.slf4j.Slf4j;
 

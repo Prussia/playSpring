@@ -1,13 +1,12 @@
 package com.prussia.test.myspring;
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.when;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.prussia.test.play.spring.service.RiskAssessorService;
+import com.prussia.play.spring.service.RiskAssessorService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DatabaseAccountServiceTest {
