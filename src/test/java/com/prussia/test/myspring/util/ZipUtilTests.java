@@ -24,17 +24,19 @@ import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.Test;
+import org.springframework.util.ResourceUtils;
 
 
 public class ZipUtilTests {
 
 	@Test
     public void add_all_files_from_a_directory_to_a_zip_archive() throws Exception {
-//        File source = new File("/Users/prussia/github/git/playSpring/src/main/resources/static");
-//        File destination = new File("/Users/prussia/github/git/playSpring/src/main/resources/static.zip");
+		String file = ResourceUtils.getFile(this.getClass().getResource("/application.properties")).getAbsolutePath();
 		
-		File source = new File("/Users/prussia/github/git/playSpring/src/main/resources/application.properties");
-        File destination = new File("/Users/prussia/github/git/playSpring/src/main/resources/application.zip");
+		File source = new File(file);
+		
+		String path = file.replace("properties", "zip");
+        File destination = new File(path);
         destination.delete();
 
         addFilesToZip(source, destination);
