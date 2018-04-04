@@ -15,7 +15,8 @@ public class CSVTest {
 
 	@Test
 	public void testApacheCommonCSV() throws Exception {
-		Reader in = new FileReader("/Users/prussia/Documents/test.csv");
+		String file = this.getClass().getResource("test.csv").getFile();
+		Reader in = new FileReader(file);
 		List<CSVRecord> records = CSVFormat.DEFAULT
 											.withFirstRecordAsHeader()
 											.withAllowMissingColumnNames().parse(in)
@@ -24,7 +25,7 @@ public class CSVTest {
 			String columnOne = record.get(0);
 			String columnTwo = record.get(1);
 		}
-		Assert.assertSame(0, records.size());
+		Assert.assertSame(5, records.size());
 
 	}
 }
