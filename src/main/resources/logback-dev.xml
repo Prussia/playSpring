@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="30 seconds">
-	<property name="LOG_FILE_MAX_SIZE" value="50KB" />
+	<property name="LOG_FILE_MAX_SIZE" value="1MB" />
 	<property name="LOG_FILE_MAX_HISTORY" value="1" />
-	<property name="LOG_TOTOAL_SIZE_CAP" value="50KB" />
+	<property name="LOG_TOTOAL_SIZE_CAP" value="50MB" />
 
 	<conversionRule conversionWord="clr"
 		converterClass="org.springframework.boot.logging.logback.ColorConverter" />
