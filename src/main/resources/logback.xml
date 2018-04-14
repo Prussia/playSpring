@@ -40,7 +40,7 @@
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<!-- Support multiple-JVM writing to the same log file -->
-    		<prudent>true</prudent>
+    		<!-- <prudent>true</prudent> -->
 		<encoder>
 			<pattern>${FILE_LOG_PATTERN}</pattern>
 		</encoder>
@@ -66,7 +66,7 @@
 		<!-- <queueSize>500</queueSize> <maxFlushTime>1000</maxFlushTime> -->
 	</appender>
 
-	<root level="TRACE">
+	<root level="INFO">
 		<appender-ref ref="ASYNCCONSOLE" />
 		<appender-ref ref="ASYNCFILE" />
 	</root>
