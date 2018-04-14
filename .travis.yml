@@ -31,4 +31,5 @@ env:
   global:
   - PGPORT=5433
 before_script:
+  - sudo -u postgres psql -p 5433 -h 127.0.0.1
   - psql -c 'create database playspring;' -U postgres
