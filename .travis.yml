@@ -25,11 +25,11 @@ deploy:
   api_key:
     secure: cIEAMqnS4TYPLoCNBTulYt2o4Cjx63e8jRGJGgTA81X0fdeU+WhzsvMii/Mxc5TtboiJgq3BZ+fjE9nTGILrMDfDLDdQNow6AUbYa6YmeTzzQHezu6RLET9cXoUIzJPq3PB4bPsdc4RO29kgh1Auk7KH9ew1zd2/ZJcl+FaVgZo8+pQNfoYmaYcni3fzYDurdDZ8lK+sHV0ljbEl9gIIo3RkqztbfaTsbNjiUCuIWK7nJHlZcmcnB+Q4qBjPaBQu/u1pxMHFLN7vGj14ISiL+CV4QCjRBaqNUzI+1kUC5AQ2UYgkq5ITZpCKbbP3cNZywgiPKDjfkJx2fhHQKGjs0e0XixtSg9WMGFPJDae/GhpiVoBDPFJXTUFVF4hzBFUOlsnXJzhXPasEwwC2LO/FNK2c/VkhYyVT9+YFX+0phJnf00s12wf5VcIwZeLyKZxZE6yVHgT1pMJXgajoleq3NGGGjaq9oRujmcZspI2AfHD2vZPpygbAIPza3aFTeClMSrufKszpy+DjqXLQB/6zkAII+Tg5Vy8SNe5ow60keIezjKmUzx3HRUBfgXHiOaXj+wUZK3MmGmGFkP1dVsS9V19vStxVXaFrH4RvHIdDifqqmbsvj0Kmx8M+y0yFFiAL+Xwmy1G93JfnUAvgv1hEhusX+zuN6tjJ/7kk0/c6leY=
   app: playspring
-services:
-  - postgresql
-env:
-  global:
-  - PGPORT=5433
-before_script:
-  - sudo -u postgres psql -p 5433 -h 127.0.0.1
-  - psql -c 'create database playspring;' -U postgres
+#services:
+#  - postgresql
+#env:
+#  global:
+#  - PGPORT=5432
+#before_script:
+#  - sudo -u postgres psql -p 5433 -h 127.0.0.1
+3  - psql -c 'create database playspring;' -U postgres
