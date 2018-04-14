@@ -39,17 +39,12 @@ Personal Project to practice and record the examples on Springboot
 - Spring Cloud
 - [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat	
 - Deployment
-	- Tomcat Deploy Plugin @AWS
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
-		- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
-			- [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)
 		- [Heroku data](https://data.heroku.com/)
-		- [Connecting to Heroku Postgres Databases from Outside of Heroku](https://devcenter.heroku.com/articles/connecting-to-heroku-postgres-databases-from-outside-of-heroku)
 - [JWT](https://jwt.io/introduction/) - JSON Web Token - used for **Information Exchange** and Authentication
 	- JSON Web Encryption [JWE]
 	- JSON Web Signature [JWS]
 	- [Oracle JSON Web Token](https://docs.oracle.com/cd/E23943_01/security.1111/e10037/jwt.htm#CIHGDBJC)
-	- [Weblogic Support for weblogic-jwt-token](https://docs.oracle.com/middleware/1221/wls/NOTES/whatsnew.htm#NOTES357)
 	- [Web Application Security](http://enterprisewebbook.com/ch9_security.html)
 - **Single Sign On**
 	- [Authentication and Authorization: OpenID vs OAuth2 vs SAML](https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/)
