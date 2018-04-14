@@ -1,6 +1,6 @@
 # playSpring [![Build Status](https://travis-ci.org/Prussia/playSpring.svg?branch=master)](https://travis-ci.org/Prussia/playSpring)
 Personal Project to practice and record the examples on Springboot
-###Feature
+### Feature
 - *SpringMVC*
 - *Spring Security*  
 - *Validation Bean* 
@@ -22,7 +22,7 @@ Personal Project to practice and record the examples on Springboot
 - Validation Constraint
 - Dockerfile
 
-###Continuous Integration
+### Continuous Integration
 - [travis-ci](https://travis-ci.org/)
 	- [db setup](https://docs.travis-ci.com/user/database-setup/)
 	- built on Postgres
@@ -30,13 +30,13 @@ Personal Project to practice and record the examples on Springboot
 	- [playSpring on Heroku](https://playspring.herokuapp.com)
 	- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
 
-###DevOps
+### DevOps
 - [docker-compose.yml](https://github.com/Prussia/playSpring/tree/master/container/playSpring)
 
-###Dev Environment
+### Dev Environment
 - [Chocolatey - Software Management Automation](https://chocolatey.org/install)
 
-##**TODO**
+## **TODO**
 - Spring Cloud
 - [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat	
 - Deployment
