@@ -20,6 +20,7 @@ Personal Project to practice and record the examples on Springboot
 - *dozer to transfer from PO to VO* 
 - Groovy Template Engine
 - Validation Constraint
+- Dockerfile
 
 ###Continuous Integration
 - [travis-ci](https://travis-ci.org/)
@@ -49,10 +50,6 @@ Personal Project to practice and record the examples on Springboot
 - **Single Sign On**
 	- [Authentication and Authorization: OpenID vs OAuth2 vs SAML](https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/)
 	- [Spring Oauth2](https://projects.spring.io/spring-security-oauth/)
-- Dockerfile
-	* [Docker Swarm](https://www.docker.com/products/docker-swarm)
-	* [Docker Universal Control Plane](https://docs.docker.com/datacenter/ucp/2.0/guides/)
-	* [Portainer](http://portainer.io/) - UI for Docker and better management
-- [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB 
-- Websocket         
-- Spring Integration
+
+- [Morphia](https://mongodb.github.io/morphia/) -- The Java Object Document Mapper for MongoDB          
+
