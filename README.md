@@ -10,19 +10,21 @@ Personal Project to practice and record the examples on Springboot
 - *Mutiple Data Source JNDI Implementation for mssql/neo4j*
 - *lombok*
 - *i18n samples*
-- *logback*
+- *logback with Asyncrous Appender*
 - *Spring Test - web integration test*
 - *Swagger* 
 	* annotation @apioperation
 - *Performance Monitor* 
 - *gzip compression in tomcat to improve the performance of front-end*
-- *Spring Data JPA*
+- *Spring Data JPA & Redis*
 - *dozer to transfer from PO to VO* 
 - Groovy Template Engine
 - Validation Constraint
 
 ###Continuous Integration
 - [travis-ci](https://travis-ci.org/)
+	- [db setup](https://docs.travis-ci.com/user/database-setup/)
+	- built on Postgres
 - [Heroku Deployment by travis](https://docs.travis-ci.com/user/deployment/heroku/)
 	- [playSpring on Heroku](https://playspring.herokuapp.com)
 	- [Settings for playSpring](https://dashboard.heroku.com/apps/playspring)
@@ -35,9 +37,7 @@ Personal Project to practice and record the examples on Springboot
 
 ##**TODO**
 - Spring Cloud
-- [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat
-- [travis-ci](https://travis-ci.org/)
-	- [db setup](https://docs.travis-ci.com/user/database-setup/)
+- [psi-probe](https://github.com/psi-probe/psi-probe/releases) - Advanced manager and monitor for Apache Tomcat	
 - Deployment
 	- Tomcat Deploy Plugin @AWS
 	* [Heroku](https://docs.travis-ci.com/user/deployment/heroku/)
