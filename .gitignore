@@ -59,3 +59,4 @@ Temporary Items
 *.iml
 
 .java-version
+playSpring.log.*.gz

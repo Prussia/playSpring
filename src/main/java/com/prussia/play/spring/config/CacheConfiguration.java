@@ -34,29 +34,6 @@ import org.springframework.cache.annotation.CachingConfigurerSupport;
 @EnableCaching // delete it if to be disable caching
 public class CacheConfiguration extends CachingConfigurerSupport {
 
-	@Bean
-	public JedisConnectionFactory redisConnectionFactory() {
-		JedisConnectionFactory redisConnectionFactory = new JedisConnectionFactory();
-		redisConnectionFactory.setHostName("127.0.0.1");
-		redisConnectionFactory.setPort(Protocol.DEFAULT_PORT);
-		return redisConnectionFactory;
-	}
-
-	@Bean
-	public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory cf) {
-		RedisTemplate<String, String> redisTemplate = new RedisTemplate<String, String>();
-		redisTemplate.setConnectionFactory(cf);
-		return redisTemplate;
-	}
-
-	@Bean(name="cacheManager")
-	@Primary
-	public CacheManager cacheManager(RedisTemplate redisTemplate) {
-		RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate);
-		cacheManager.setDefaultExpiration(300);
-		return cacheManager;
-	}
-
 	/*
 	 * ehcache 主要的管理器
 	 */
