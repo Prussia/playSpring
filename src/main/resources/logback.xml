@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<property name="LOG_FILE_MAX_SIZE" value="50MB" />
+	<property name="LOG_FILE_MAX_SIZE" value="100MB" />
 	<property name="LOG_FILE_MAX_HISTORY" value="30" />
 	<property name="LOG_TOTOAL_SIZE_CAP" value="5GB" />
 
