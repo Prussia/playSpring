@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -53,4 +54,31 @@ public class ReferenceTest {
                 + " calls to System.gc() to result in weakHashMap size of : "
                 + aMap.size());
     }
+
+//    @Test
+//    public void testSoftReference() {
+//
+//    }
+
+    @Test
+    public void testWeakReference() {
+        HashMap<Quote, Value> map =
+                new HashMap<Quote, Value>();
+        WeakReference<HashMap<Quote, Value>> aMap =
+                new WeakReference<HashMap<Quote, Value>>(
+                        map);
+
+        map = null;
+
+        while (null != aMap.get()) {
+            aMap.get().put(new Quote(),
+                    new Value());
+            log.info("aMap.get().size() = {}", aMap.get().size());
+            System.gc();
+        }
+        log.warn("Its garbage collected");
+    }
+
+
+
 }
