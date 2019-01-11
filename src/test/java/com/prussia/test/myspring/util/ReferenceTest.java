@@ -27,7 +27,7 @@ public class ReferenceTest {
         quote = null;
 
         System.gc();
-        System.out.println("aMap.size() = " + aMap.size());
+        log.info("aMap.size() = " + aMap.size());
 
         Assert.assertEquals(aMap.size(), 1);
     }
@@ -50,9 +50,9 @@ public class ReferenceTest {
             ++count;
             System.gc();
         }
-        System.out.println("Took " + count
-                + " calls to System.gc() to result in weakHashMap size of : "
-                + aMap.size());
+        log.info("Took {} calls to System.gc() to result in weakHashMap size of : {}", count, aMap.size());
+
+        Assert.assertEquals(0 , aMap.size());
     }
 
 //    @Test
